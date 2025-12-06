@@ -1,0 +1,501 @@
+ticket_id,priority,status,category,subject,description,created_date,resolved_date,assigned_to,created_at
+TKT-100000,High,Open,Access,Network outage,Issue reported: Network outage,2020-11-15,,Bob,2020-11-15 00:00:00
+TKT-100001,High,Open,Network,Application crash,Issue reported: Application crash,2021-08-30,,Ivan,2021-08-30 00:00:00
+TKT-100002,High,Resolved,Access,Password reset,Issue reported: Password reset,2021-03-12,2021-03-13,Diana,2021-03-12 00:00:00
+TKT-100003,Medium,In Progress,Security,Network outage,Issue reported: Network outage,2024-11-10,,Ivan,2024-11-10 00:00:00
+TKT-100004,Critical,Open,Access,Email malfunction,Issue reported: Email malfunction,2020-12-02,,Hannah,2020-12-02 00:00:00
+TKT-100005,Low,Resolved,Access,Email malfunction,Issue reported: Email malfunction,2022-09-30,2022-10-12,Hannah,2022-09-30 00:00:00
+TKT-100006,Critical,Open,Access,Access request,Issue reported: Access request,2021-07-23,,Julia,2021-07-23 00:00:00
+TKT-100007,Low,Closed,Network,Application crash,Issue reported: Application crash,2024-04-09,2024-04-22,Alice,2024-04-09 00:00:00
+TKT-100008,Medium,Open,Software,Security alert,Issue reported: Security alert,2021-12-09,,Diana,2021-12-09 00:00:00
+TKT-100009,Medium,Open,Security,Login issue,Issue reported: Login issue,2020-04-02,,George,2020-04-02 00:00:00
+TKT-100010,Critical,Closed,Network,Security alert,Issue reported: Security alert,2023-12-07,2023-12-17,Julia,2023-12-07 00:00:00
+TKT-100011,High,Closed,Hardware,Application crash,Issue reported: Application crash,2020-11-20,2020-12-08,Fatima,2020-11-20 00:00:00
+TKT-100012,High,In Progress,Hardware,Security alert,Issue reported: Security alert,2023-01-30,,Julia,2023-01-30 00:00:00
+TKT-100013,High,In Progress,Network,Email malfunction,Issue reported: Email malfunction,2021-10-23,,Ethan,2021-10-23 00:00:00
+TKT-100014,Medium,Closed,Access,Password reset,Issue reported: Password reset,2021-04-19,2021-04-25,Ivan,2021-04-19 00:00:00
+TKT-100015,Medium,Open,Access,System failure,Issue reported: System failure,2024-02-26,,Julia,2024-02-26 00:00:00
+TKT-100016,High,Open,Network,Device not responding,Issue reported: Device not responding,2020-05-04,,Hannah,2020-05-04 00:00:00
+TKT-100017,Critical,Closed,Software,Application crash,Issue reported: Application crash,2022-11-21,2022-11-26,Fatima,2022-11-21 00:00:00
+TKT-100018,Critical,Resolved,Security,Security alert,Issue reported: Security alert,2022-04-12,2022-05-02,Hannah,2022-04-12 00:00:00
+TKT-100019,Critical,Open,Software,System failure,Issue reported: System failure,2022-11-01,,Hannah,2022-11-01 00:00:00
+TKT-100020,Low,Closed,Access,Security alert,Issue reported: Security alert,2023-09-09,2023-09-15,Ethan,2023-09-09 00:00:00
+TKT-100021,Low,In Progress,Network,Login issue,Issue reported: Login issue,2024-08-21,,Charlie,2024-08-21 00:00:00
+TKT-100022,Low,In Progress,Software,Login issue,Issue reported: Login issue,2021-09-01,,Charlie,2021-09-01 00:00:00
+TKT-100023,Low,Open,Access,Access request,Issue reported: Access request,2021-02-11,,Bob,2021-02-11 00:00:00
+TKT-100024,Medium,Resolved,Access,Network outage,Issue reported: Network outage,2023-12-30,2024-01-07,Hannah,2023-12-30 00:00:00
+TKT-100025,Critical,Open,Hardware,Email malfunction,Issue reported: Email malfunction,2022-09-26,,Bob,2022-09-26 00:00:00
+TKT-100026,Medium,In Progress,Hardware,Login issue,Issue reported: Login issue,2023-04-23,,Hannah,2023-04-23 00:00:00
+TKT-100027,Critical,In Progress,Access,Password reset,Issue reported: Password reset,2023-01-02,,Bob,2023-01-02 00:00:00
+TKT-100028,High,Resolved,Security,Security alert,Issue reported: Security alert,2024-04-04,2024-04-06,Ivan,2024-04-04 00:00:00
+TKT-100029,Low,Closed,Security,Login issue,Issue reported: Login issue,2024-09-11,2024-09-19,Diana,2024-09-11 00:00:00
+TKT-100030,Low,In Progress,Security,Email malfunction,Issue reported: Email malfunction,2023-07-10,,Charlie,2023-07-10 00:00:00
+TKT-100031,Critical,Resolved,Access,Security alert,Issue reported: Security alert,2022-03-21,2022-04-07,Charlie,2022-03-21 00:00:00
+TKT-100032,Low,Closed,Software,Login issue,Issue reported: Login issue,2024-10-12,2024-10-27,Julia,2024-10-12 00:00:00
+TKT-100033,Medium,In Progress,Hardware,Application crash,Issue reported: Application crash,2020-02-12,,Diana,2020-02-12 00:00:00
+TKT-100034,Medium,Open,Network,Password reset,Issue reported: Password reset,2020-02-29,,Charlie,2020-02-29 00:00:00
+TKT-100035,Low,Resolved,Network,Application crash,Issue reported: Application crash,2023-12-31,2024-01-06,Fatima,2023-12-31 00:00:00
+TKT-100036,Medium,Open,Hardware,Password reset,Issue reported: Password reset,2024-09-12,,Julia,2024-09-12 00:00:00
+TKT-100037,Low,In Progress,Security,System failure,Issue reported: System failure,2020-08-06,,Ivan,2020-08-06 00:00:00
+TKT-100038,Low,In Progress,Access,Login issue,Issue reported: Login issue,2021-09-10,,Ivan,2021-09-10 00:00:00
+TKT-100039,High,Closed,Software,Access request,Issue reported: Access request,2023-02-06,2023-02-16,Fatima,2023-02-06 00:00:00
+TKT-100040,Critical,In Progress,Access,Security alert,Issue reported: Security alert,2023-09-25,,Hannah,2023-09-25 00:00:00
+TKT-100041,Medium,Open,Hardware,System failure,Issue reported: System failure,2023-07-29,,Diana,2023-07-29 00:00:00
+TKT-100042,Medium,Open,Hardware,Password reset,Issue reported: Password reset,2024-07-18,,Ivan,2024-07-18 00:00:00
+TKT-100043,Medium,In Progress,Software,Security alert,Issue reported: Security alert,2022-08-26,,Diana,2022-08-26 00:00:00
+TKT-100044,Low,Closed,Hardware,Access request,Issue reported: Access request,2022-06-22,2022-06-30,Charlie,2022-06-22 00:00:00
+TKT-100045,Low,Open,Security,Password reset,Issue reported: Password reset,2022-06-22,,Fatima,2022-06-22 00:00:00
+TKT-100046,Low,Closed,Software,Device not responding,Issue reported: Device not responding,2024-07-16,2024-07-20,Hannah,2024-07-16 00:00:00
+TKT-100047,Medium,In Progress,Network,Device not responding,Issue reported: Device not responding,2021-01-30,,Fatima,2021-01-30 00:00:00
+TKT-100048,Medium,Resolved,Security,Email malfunction,Issue reported: Email malfunction,2020-08-13,2020-08-18,Fatima,2020-08-13 00:00:00
+TKT-100049,Low,Open,Network,Access request,Issue reported: Access request,2022-08-26,,Hannah,2022-08-26 00:00:00
+TKT-100050,Medium,Resolved,Network,Login issue,Issue reported: Login issue,2020-03-07,2020-03-19,Alice,2020-03-07 00:00:00
+TKT-100051,Medium,In Progress,Security,Email malfunction,Issue reported: Email malfunction,2021-05-29,,Diana,2021-05-29 00:00:00
+TKT-100052,High,Resolved,Security,Device not responding,Issue reported: Device not responding,2024-11-24,2024-12-02,Bob,2024-11-24 00:00:00
+TKT-100053,High,In Progress,Access,Network outage,Issue reported: Network outage,2022-01-15,,Charlie,2022-01-15 00:00:00
+TKT-100054,Low,Resolved,Network,Network outage,Issue reported: Network outage,2020-08-02,2020-08-22,Hannah,2020-08-02 00:00:00
+TKT-100055,Critical,Resolved,Hardware,Login issue,Issue reported: Login issue,2020-01-04,2020-01-19,Ethan,2020-01-04 00:00:00
+TKT-100056,High,In Progress,Network,System failure,Issue reported: System failure,2024-03-28,,Hannah,2024-03-28 00:00:00
+TKT-100057,Low,Resolved,Software,Password reset,Issue reported: Password reset,2024-01-23,2024-02-01,Charlie,2024-01-23 00:00:00
+TKT-100058,Low,In Progress,Network,Network outage,Issue reported: Network outage,2021-12-09,,Julia,2021-12-09 00:00:00
+TKT-100059,Critical,Closed,Network,Login issue,Issue reported: Login issue,2023-07-19,2023-07-24,Diana,2023-07-19 00:00:00
+TKT-100060,Low,Closed,Security,Network outage,Issue reported: Network outage,2021-07-21,2021-08-07,Ivan,2021-07-21 00:00:00
+TKT-100061,Low,Open,Network,Device not responding,Issue reported: Device not responding,2023-03-08,,Bob,2023-03-08 00:00:00
+TKT-100062,Low,Resolved,Hardware,Performance issue,Issue reported: Performance issue,2021-02-07,2021-02-08,Bob,2021-02-07 00:00:00
+TKT-100063,Medium,Closed,Software,Email malfunction,Issue reported: Email malfunction,2021-07-27,2021-08-05,Fatima,2021-07-27 00:00:00
+TKT-100064,Low,Closed,Network,Access request,Issue reported: Access request,2021-12-01,2021-12-18,Julia,2021-12-01 00:00:00
+TKT-100065,High,Closed,Security,Performance issue,Issue reported: Performance issue,2022-12-31,2023-01-10,George,2022-12-31 00:00:00
+TKT-100066,Low,Resolved,Hardware,Network outage,Issue reported: Network outage,2024-04-24,2024-04-27,Charlie,2024-04-24 00:00:00
+TKT-100067,Critical,Resolved,Network,Login issue,Issue reported: Login issue,2021-07-07,2021-07-11,Ivan,2021-07-07 00:00:00
+TKT-100068,Critical,Open,Hardware,Login issue,Issue reported: Login issue,2023-07-26,,Diana,2023-07-26 00:00:00
+TKT-100069,Critical,Resolved,Network,Password reset,Issue reported: Password reset,2020-09-15,2020-09-28,Julia,2020-09-15 00:00:00
+TKT-100070,Low,Closed,Hardware,Password reset,Issue reported: Password reset,2023-01-31,2023-02-19,Alice,2023-01-31 00:00:00
+TKT-100071,Critical,In Progress,Network,Application crash,Issue reported: Application crash,2021-08-05,,Diana,2021-08-05 00:00:00
+TKT-100072,Low,In Progress,Access,Device not responding,Issue reported: Device not responding,2021-09-04,,Ethan,2021-09-04 00:00:00
+TKT-100073,High,Resolved,Security,Security alert,Issue reported: Security alert,2023-08-17,2023-08-19,Fatima,2023-08-17 00:00:00
+TKT-100074,Medium,Resolved,Network,Login issue,Issue reported: Login issue,2021-06-04,2021-06-05,Charlie,2021-06-04 00:00:00
+TKT-100075,Medium,Resolved,Software,Application crash,Issue reported: Application crash,2023-12-13,2023-12-20,Julia,2023-12-13 00:00:00
+TKT-100076,Critical,In Progress,Software,Access request,Issue reported: Access request,2022-04-09,,Ivan,2022-04-09 00:00:00
+TKT-100077,High,In Progress,Network,Performance issue,Issue reported: Performance issue,2021-03-02,,Alice,2021-03-02 00:00:00
+TKT-100078,Low,In Progress,Security,Device not responding,Issue reported: Device not responding,2024-02-03,,Charlie,2024-02-03 00:00:00
+TKT-100079,High,Resolved,Network,Security alert,Issue reported: Security alert,2022-07-21,2022-08-06,Ivan,2022-07-21 00:00:00
+TKT-100080,High,Closed,Network,Access request,Issue reported: Access request,2023-11-12,2023-11-30,Diana,2023-11-12 00:00:00
+TKT-100081,Critical,Closed,Network,Login issue,Issue reported: Login issue,2021-01-03,2021-01-04,Charlie,2021-01-03 00:00:00
+TKT-100082,Low,Open,Software,Network outage,Issue reported: Network outage,2022-10-13,,Ethan,2022-10-13 00:00:00
+TKT-100083,High,Closed,Hardware,Network outage,Issue reported: Network outage,2023-12-12,2023-12-20,Ethan,2023-12-12 00:00:00
+TKT-100084,Low,Closed,Access,Performance issue,Issue reported: Performance issue,2022-03-04,2022-03-07,Diana,2022-03-04 00:00:00
+TKT-100085,Low,In Progress,Security,Application crash,Issue reported: Application crash,2020-05-18,,Alice,2020-05-18 00:00:00
+TKT-100086,Low,Closed,Software,Access request,Issue reported: Access request,2022-01-17,2022-02-01,Diana,2022-01-17 00:00:00
+TKT-100087,Low,In Progress,Access,Email malfunction,Issue reported: Email malfunction,2020-09-02,,Ethan,2020-09-02 00:00:00
+TKT-100088,High,In Progress,Software,Login issue,Issue reported: Login issue,2020-03-24,,Julia,2020-03-24 00:00:00
+TKT-100089,High,Resolved,Access,Email malfunction,Issue reported: Email malfunction,2021-06-06,2021-06-14,Ivan,2021-06-06 00:00:00
+TKT-100090,Low,Open,Access,Access request,Issue reported: Access request,2023-07-29,,George,2023-07-29 00:00:00
+TKT-100091,Critical,In Progress,Access,Email malfunction,Issue reported: Email malfunction,2020-05-14,,Julia,2020-05-14 00:00:00
+TKT-100092,Medium,In Progress,Network,Device not responding,Issue reported: Device not responding,2022-10-02,,Fatima,2022-10-02 00:00:00
+TKT-100093,Critical,Resolved,Software,Device not responding,Issue reported: Device not responding,2021-07-23,2021-08-11,Charlie,2021-07-23 00:00:00
+TKT-100094,Low,In Progress,Security,Application crash,Issue reported: Application crash,2022-06-26,,Hannah,2022-06-26 00:00:00
+TKT-100095,Low,In Progress,Software,System failure,Issue reported: System failure,2021-07-21,,Bob,2021-07-21 00:00:00
+TKT-100096,Critical,Open,Access,Password reset,Issue reported: Password reset,2021-02-05,,Diana,2021-02-05 00:00:00
+TKT-100097,Critical,Resolved,Network,Network outage,Issue reported: Network outage,2020-05-11,2020-05-14,Bob,2020-05-11 00:00:00
+TKT-100098,Medium,Open,Software,Security alert,Issue reported: Security alert,2023-04-30,,Hannah,2023-04-30 00:00:00
+TKT-100099,High,Closed,Software,Password reset,Issue reported: Password reset,2022-12-15,2022-12-18,Fatima,2022-12-15 00:00:00
+TKT-100100,Medium,Resolved,Hardware,Login issue,Issue reported: Login issue,2021-08-13,2021-08-30,Bob,2021-08-13 00:00:00
+TKT-100101,Critical,Open,Software,Device not responding,Issue reported: Device not responding,2024-06-17,,Ethan,2024-06-17 00:00:00
+TKT-100102,Medium,Open,Access,Network outage,Issue reported: Network outage,2024-10-30,,Ivan,2024-10-30 00:00:00
+TKT-100103,Medium,Open,Access,Password reset,Issue reported: Password reset,2020-08-21,,Ivan,2020-08-21 00:00:00
+TKT-100104,Medium,Open,Network,Device not responding,Issue reported: Device not responding,2023-08-11,,Fatima,2023-08-11 00:00:00
+TKT-100105,Medium,Closed,Hardware,Access request,Issue reported: Access request,2024-08-17,2024-08-26,Ivan,2024-08-17 00:00:00
+TKT-100106,High,Closed,Network,Password reset,Issue reported: Password reset,2020-03-17,2020-03-29,Alice,2020-03-17 00:00:00
+TKT-100107,Low,Resolved,Software,Access request,Issue reported: Access request,2022-01-21,2022-01-27,Ivan,2022-01-21 00:00:00
+TKT-100108,High,Closed,Software,Access request,Issue reported: Access request,2022-10-31,2022-11-08,Diana,2022-10-31 00:00:00
+TKT-100109,Low,Resolved,Security,Password reset,Issue reported: Password reset,2023-07-20,2023-07-26,Julia,2023-07-20 00:00:00
+TKT-100110,Medium,Resolved,Access,Login issue,Issue reported: Login issue,2024-09-09,2024-09-26,Ethan,2024-09-09 00:00:00
+TKT-100111,Low,In Progress,Software,Application crash,Issue reported: Application crash,2020-07-22,,George,2020-07-22 00:00:00
+TKT-100112,High,Open,Access,System failure,Issue reported: System failure,2020-09-04,,Alice,2020-09-04 00:00:00
+TKT-100113,High,In Progress,Hardware,Password reset,Issue reported: Password reset,2021-01-11,,Charlie,2021-01-11 00:00:00
+TKT-100114,Low,Open,Network,System failure,Issue reported: System failure,2020-03-31,,Bob,2020-03-31 00:00:00
+TKT-100115,Medium,In Progress,Software,Security alert,Issue reported: Security alert,2022-10-27,,Bob,2022-10-27 00:00:00
+TKT-100116,Low,In Progress,Access,Device not responding,Issue reported: Device not responding,2023-03-03,,Ivan,2023-03-03 00:00:00
+TKT-100117,Critical,Open,Network,Application crash,Issue reported: Application crash,2020-08-08,,Fatima,2020-08-08 00:00:00
+TKT-100118,Critical,Closed,Network,Application crash,Issue reported: Application crash,2021-07-07,2021-07-15,George,2021-07-07 00:00:00
+TKT-100119,Medium,Open,Security,Login issue,Issue reported: Login issue,2023-05-30,,Alice,2023-05-30 00:00:00
+TKT-100120,Low,Resolved,Hardware,Login issue,Issue reported: Login issue,2022-11-13,2022-11-23,George,2022-11-13 00:00:00
+TKT-100121,Medium,Resolved,Hardware,Application crash,Issue reported: Application crash,2024-08-26,2024-09-01,Ivan,2024-08-26 00:00:00
+TKT-100122,High,Open,Access,Access request,Issue reported: Access request,2021-07-13,,Ethan,2021-07-13 00:00:00
+TKT-100123,Low,Resolved,Software,Device not responding,Issue reported: Device not responding,2024-05-14,2024-05-29,Julia,2024-05-14 00:00:00
+TKT-100124,High,Resolved,Access,Login issue,Issue reported: Login issue,2024-03-13,2024-03-22,Alice,2024-03-13 00:00:00
+TKT-100125,Critical,Closed,Security,Network outage,Issue reported: Network outage,2022-03-21,2022-03-28,Fatima,2022-03-21 00:00:00
+TKT-100126,High,Closed,Network,Application crash,Issue reported: Application crash,2020-09-12,2020-09-15,Fatima,2020-09-12 00:00:00
+TKT-100127,Low,Resolved,Hardware,Security alert,Issue reported: Security alert,2020-04-27,2020-05-09,George,2020-04-27 00:00:00
+TKT-100128,High,In Progress,Network,Performance issue,Issue reported: Performance issue,2020-01-28,,Bob,2020-01-28 00:00:00
+TKT-100129,Medium,Open,Security,Password reset,Issue reported: Password reset,2021-11-02,,Fatima,2021-11-02 00:00:00
+TKT-100130,High,In Progress,Software,Email malfunction,Issue reported: Email malfunction,2022-04-07,,Fatima,2022-04-07 00:00:00
+TKT-100131,High,Open,Software,System failure,Issue reported: System failure,2021-02-27,,George,2021-02-27 00:00:00
+TKT-100132,Low,Closed,Access,Access request,Issue reported: Access request,2023-11-14,2023-11-21,Bob,2023-11-14 00:00:00
+TKT-100133,High,Resolved,Hardware,Application crash,Issue reported: Application crash,2021-02-05,2021-02-11,Fatima,2021-02-05 00:00:00
+TKT-100134,Medium,Resolved,Hardware,Device not responding,Issue reported: Device not responding,2024-07-10,2024-07-24,Ethan,2024-07-10 00:00:00
+TKT-100135,Low,Open,Software,Performance issue,Issue reported: Performance issue,2023-01-29,,Ivan,2023-01-29 00:00:00
+TKT-100136,High,In Progress,Security,Performance issue,Issue reported: Performance issue,2020-03-27,,Julia,2020-03-27 00:00:00
+TKT-100137,Low,Resolved,Access,Access request,Issue reported: Access request,2023-11-09,2023-11-12,Alice,2023-11-09 00:00:00
+TKT-100138,High,Open,Access,System failure,Issue reported: System failure,2020-01-31,,Alice,2020-01-31 00:00:00
+TKT-100139,High,In Progress,Network,Email malfunction,Issue reported: Email malfunction,2021-05-14,,Alice,2021-05-14 00:00:00
+TKT-100140,Low,In Progress,Network,Password reset,Issue reported: Password reset,2024-07-09,,George,2024-07-09 00:00:00
+TKT-100141,Critical,Closed,Security,Application crash,Issue reported: Application crash,2023-06-24,2023-07-01,Fatima,2023-06-24 00:00:00
+TKT-100142,High,In Progress,Network,Login issue,Issue reported: Login issue,2021-03-16,,Fatima,2021-03-16 00:00:00
+TKT-100143,Low,Resolved,Hardware,Access request,Issue reported: Access request,2021-07-26,2021-07-28,Diana,2021-07-26 00:00:00
+TKT-100144,Medium,Open,Access,Email malfunction,Issue reported: Email malfunction,2020-08-20,,Fatima,2020-08-20 00:00:00
+TKT-100145,High,In Progress,Software,Password reset,Issue reported: Password reset,2024-02-25,,Fatima,2024-02-25 00:00:00
+TKT-100146,Critical,Closed,Hardware,Application crash,Issue reported: Application crash,2020-02-29,2020-03-02,Fatima,2020-02-29 00:00:00
+TKT-100147,Low,Open,Access,Access request,Issue reported: Access request,2024-06-02,,Fatima,2024-06-02 00:00:00
+TKT-100148,Low,In Progress,Security,Application crash,Issue reported: Application crash,2024-04-10,,Fatima,2024-04-10 00:00:00
+TKT-100149,Critical,Resolved,Access,Performance issue,Issue reported: Performance issue,2024-06-18,2024-06-24,Diana,2024-06-18 00:00:00
+TKT-100150,Medium,Open,Security,Email malfunction,Issue reported: Email malfunction,2023-06-07,,Bob,2023-06-07 00:00:00
+TKT-100151,High,Open,Software,Security alert,Issue reported: Security alert,2023-06-08,,Ethan,2023-06-08 00:00:00
+TKT-100152,Low,In Progress,Access,Email malfunction,Issue reported: Email malfunction,2022-06-25,,Hannah,2022-06-25 00:00:00
+TKT-100153,Low,Resolved,Hardware,Device not responding,Issue reported: Device not responding,2024-07-07,2024-07-18,Ethan,2024-07-07 00:00:00
+TKT-100154,Medium,Closed,Hardware,Password reset,Issue reported: Password reset,2023-06-01,2023-06-10,Charlie,2023-06-01 00:00:00
+TKT-100155,Critical,Open,Access,Device not responding,Issue reported: Device not responding,2023-02-24,,George,2023-02-24 00:00:00
+TKT-100156,Medium,Resolved,Security,Email malfunction,Issue reported: Email malfunction,2022-12-23,2022-12-26,Diana,2022-12-23 00:00:00
+TKT-100157,Low,Resolved,Hardware,System failure,Issue reported: System failure,2021-03-11,2021-03-15,Charlie,2021-03-11 00:00:00
+TKT-100158,High,Closed,Network,Application crash,Issue reported: Application crash,2021-04-18,2021-05-01,Ivan,2021-04-18 00:00:00
+TKT-100159,Critical,In Progress,Network,Application crash,Issue reported: Application crash,2024-08-06,,Ethan,2024-08-06 00:00:00
+TKT-100160,Low,Open,Software,Access request,Issue reported: Access request,2021-04-29,,Hannah,2021-04-29 00:00:00
+TKT-100161,Medium,Open,Access,Performance issue,Issue reported: Performance issue,2022-09-15,,Hannah,2022-09-15 00:00:00
+TKT-100162,Medium,Closed,Hardware,Access request,Issue reported: Access request,2021-07-16,2021-07-31,Charlie,2021-07-16 00:00:00
+TKT-100163,Low,Open,Security,Network outage,Issue reported: Network outage,2020-03-25,,Charlie,2020-03-25 00:00:00
+TKT-100164,Critical,Open,Hardware,Password reset,Issue reported: Password reset,2020-03-03,,Hannah,2020-03-03 00:00:00
+TKT-100165,High,Resolved,Access,Login issue,Issue reported: Login issue,2020-03-21,2020-04-04,George,2020-03-21 00:00:00
+TKT-100166,Critical,In Progress,Access,Device not responding,Issue reported: Device not responding,2023-07-28,,Fatima,2023-07-28 00:00:00
+TKT-100167,High,Open,Software,Device not responding,Issue reported: Device not responding,2023-09-13,,Hannah,2023-09-13 00:00:00
+TKT-100168,Low,In Progress,Software,Performance issue,Issue reported: Performance issue,2023-08-24,,Alice,2023-08-24 00:00:00
+TKT-100169,Medium,Resolved,Access,Security alert,Issue reported: Security alert,2022-08-24,2022-08-26,Alice,2022-08-24 00:00:00
+TKT-100170,Critical,Resolved,Hardware,System failure,Issue reported: System failure,2021-04-09,2021-04-26,Fatima,2021-04-09 00:00:00
+TKT-100171,Low,In Progress,Hardware,Access request,Issue reported: Access request,2024-06-11,,Julia,2024-06-11 00:00:00
+TKT-100172,High,Open,Software,Login issue,Issue reported: Login issue,2024-02-24,,George,2024-02-24 00:00:00
+TKT-100173,High,Closed,Access,Device not responding,Issue reported: Device not responding,2021-12-15,2021-12-26,Charlie,2021-12-15 00:00:00
+TKT-100174,Low,In Progress,Network,Login issue,Issue reported: Login issue,2021-09-27,,Ivan,2021-09-27 00:00:00
+TKT-100175,Low,Closed,Software,Access request,Issue reported: Access request,2024-12-02,2024-12-22,Ethan,2024-12-02 00:00:00
+TKT-100176,Medium,Open,Security,System failure,Issue reported: System failure,2024-08-05,,Bob,2024-08-05 00:00:00
+TKT-100177,Medium,Closed,Hardware,Application crash,Issue reported: Application crash,2024-03-12,2024-03-31,Fatima,2024-03-12 00:00:00
+TKT-100178,High,In Progress,Security,Access request,Issue reported: Access request,2020-04-02,,Fatima,2020-04-02 00:00:00
+TKT-100179,Medium,Open,Software,Access request,Issue reported: Access request,2023-05-30,,Bob,2023-05-30 00:00:00
+TKT-100180,Critical,Closed,Access,Application crash,Issue reported: Application crash,2021-07-16,2021-07-17,George,2021-07-16 00:00:00
+TKT-100181,High,Closed,Access,Email malfunction,Issue reported: Email malfunction,2023-04-15,2023-04-17,Charlie,2023-04-15 00:00:00
+TKT-100182,High,Closed,Hardware,Application crash,Issue reported: Application crash,2024-11-22,2024-11-30,George,2024-11-22 00:00:00
+TKT-100183,High,Closed,Security,System failure,Issue reported: System failure,2021-01-29,2021-01-31,Diana,2021-01-29 00:00:00
+TKT-100184,Low,Resolved,Software,Network outage,Issue reported: Network outage,2024-09-08,2024-09-12,Ivan,2024-09-08 00:00:00
+TKT-100185,High,In Progress,Network,Performance issue,Issue reported: Performance issue,2020-02-18,,Ivan,2020-02-18 00:00:00
+TKT-100186,Critical,Closed,Software,Email malfunction,Issue reported: Email malfunction,2021-08-02,2021-08-07,George,2021-08-02 00:00:00
+TKT-100187,Critical,Open,Access,Password reset,Issue reported: Password reset,2021-05-30,,Hannah,2021-05-30 00:00:00
+TKT-100188,High,Closed,Access,Application crash,Issue reported: Application crash,2022-12-08,2022-12-13,Alice,2022-12-08 00:00:00
+TKT-100189,Critical,Open,Security,Login issue,Issue reported: Login issue,2022-04-16,,George,2022-04-16 00:00:00
+TKT-100190,Critical,Closed,Security,Password reset,Issue reported: Password reset,2023-03-17,2023-03-26,George,2023-03-17 00:00:00
+TKT-100191,Low,Resolved,Security,Network outage,Issue reported: Network outage,2021-09-25,2021-10-06,Diana,2021-09-25 00:00:00
+TKT-100192,Low,Closed,Security,Email malfunction,Issue reported: Email malfunction,2022-05-12,2022-05-18,Ivan,2022-05-12 00:00:00
+TKT-100193,Critical,Open,Access,Email malfunction,Issue reported: Email malfunction,2020-06-14,,Fatima,2020-06-14 00:00:00
+TKT-100194,High,Open,Security,Security alert,Issue reported: Security alert,2024-08-02,,Fatima,2024-08-02 00:00:00
+TKT-100195,High,Open,Network,Access request,Issue reported: Access request,2022-03-14,,Alice,2022-03-14 00:00:00
+TKT-100196,Low,Resolved,Network,Email malfunction,Issue reported: Email malfunction,2021-01-03,2021-01-18,Hannah,2021-01-03 00:00:00
+TKT-100197,Critical,In Progress,Software,Device not responding,Issue reported: Device not responding,2020-10-12,,Diana,2020-10-12 00:00:00
+TKT-100198,Low,Open,Software,Access request,Issue reported: Access request,2023-08-16,,Alice,2023-08-16 00:00:00
+TKT-100199,Medium,Closed,Hardware,Email malfunction,Issue reported: Email malfunction,2023-05-04,2023-05-11,Charlie,2023-05-04 00:00:00
+TKT-100200,Medium,Closed,Hardware,Application crash,Issue reported: Application crash,2021-12-03,2021-12-18,Hannah,2021-12-03 00:00:00
+TKT-100201,High,Resolved,Network,Device not responding,Issue reported: Device not responding,2020-04-23,2020-05-10,Charlie,2020-04-23 00:00:00
+TKT-100202,Medium,Resolved,Access,System failure,Issue reported: System failure,2023-12-10,2023-12-17,George,2023-12-10 00:00:00
+TKT-100203,High,Open,Network,Password reset,Issue reported: Password reset,2022-01-21,,Diana,2022-01-21 00:00:00
+TKT-100204,High,Closed,Software,Security alert,Issue reported: Security alert,2020-05-26,2020-06-04,Charlie,2020-05-26 00:00:00
+TKT-100205,Critical,Open,Security,Access request,Issue reported: Access request,2024-09-01,,Charlie,2024-09-01 00:00:00
+TKT-100206,Critical,In Progress,Hardware,System failure,Issue reported: System failure,2021-03-24,,Julia,2021-03-24 00:00:00
+TKT-100207,High,Open,Software,Performance issue,Issue reported: Performance issue,2022-09-23,,Diana,2022-09-23 00:00:00
+TKT-100208,High,Open,Network,Security alert,Issue reported: Security alert,2020-12-08,,Hannah,2020-12-08 00:00:00
+TKT-100209,Medium,Open,Security,Application crash,Issue reported: Application crash,2024-10-26,,Diana,2024-10-26 00:00:00
+TKT-100210,Medium,Resolved,Network,System failure,Issue reported: System failure,2020-08-11,2020-08-13,Bob,2020-08-11 00:00:00
+TKT-100211,Critical,Open,Security,Password reset,Issue reported: Password reset,2023-03-01,,Diana,2023-03-01 00:00:00
+TKT-100212,Medium,Closed,Network,Password reset,Issue reported: Password reset,2021-11-11,2021-11-16,Ivan,2021-11-11 00:00:00
+TKT-100213,Critical,In Progress,Network,Performance issue,Issue reported: Performance issue,2022-03-01,,Alice,2022-03-01 00:00:00
+TKT-100214,High,Open,Access,Performance issue,Issue reported: Performance issue,2020-09-22,,Julia,2020-09-22 00:00:00
+TKT-100215,Medium,Resolved,Software,Application crash,Issue reported: Application crash,2020-10-23,2020-10-27,Diana,2020-10-23 00:00:00
+TKT-100216,Medium,Closed,Hardware,Performance issue,Issue reported: Performance issue,2023-08-25,2023-08-31,Bob,2023-08-25 00:00:00
+TKT-100217,Critical,In Progress,Software,Password reset,Issue reported: Password reset,2024-02-21,,George,2024-02-21 00:00:00
+TKT-100218,Critical,Closed,Access,Application crash,Issue reported: Application crash,2024-09-15,2024-09-19,Fatima,2024-09-15 00:00:00
+TKT-100219,Critical,Open,Network,Device not responding,Issue reported: Device not responding,2021-12-05,,Julia,2021-12-05 00:00:00
+TKT-100220,Low,Open,Security,Network outage,Issue reported: Network outage,2022-11-05,,Hannah,2022-11-05 00:00:00
+TKT-100221,Low,In Progress,Software,Login issue,Issue reported: Login issue,2021-03-06,,Fatima,2021-03-06 00:00:00
+TKT-100222,High,Closed,Hardware,Device not responding,Issue reported: Device not responding,2024-07-23,2024-07-24,Hannah,2024-07-23 00:00:00
+TKT-100223,Low,Open,Software,Performance issue,Issue reported: Performance issue,2024-01-19,,Hannah,2024-01-19 00:00:00
+TKT-100224,Low,Closed,Hardware,Performance issue,Issue reported: Performance issue,2024-09-17,2024-09-27,Diana,2024-09-17 00:00:00
+TKT-100225,High,Resolved,Hardware,Login issue,Issue reported: Login issue,2022-02-08,2022-02-16,George,2022-02-08 00:00:00
+TKT-100226,Medium,Resolved,Hardware,Email malfunction,Issue reported: Email malfunction,2023-10-22,2023-10-27,Diana,2023-10-22 00:00:00
+TKT-100227,Critical,In Progress,Access,Security alert,Issue reported: Security alert,2022-07-17,,Ethan,2022-07-17 00:00:00
+TKT-100228,Medium,Closed,Access,Access request,Issue reported: Access request,2021-01-07,2021-01-25,Ethan,2021-01-07 00:00:00
+TKT-100229,Critical,Open,Software,Password reset,Issue reported: Password reset,2023-10-02,,George,2023-10-02 00:00:00
+TKT-100230,Critical,Resolved,Software,Security alert,Issue reported: Security alert,2021-02-03,2021-02-05,Fatima,2021-02-03 00:00:00
+TKT-100231,Critical,In Progress,Security,Password reset,Issue reported: Password reset,2024-02-10,,Diana,2024-02-10 00:00:00
+TKT-100232,High,Resolved,Security,Network outage,Issue reported: Network outage,2021-04-28,2021-05-16,Bob,2021-04-28 00:00:00
+TKT-100233,Medium,Closed,Access,System failure,Issue reported: System failure,2023-07-29,2023-08-06,Fatima,2023-07-29 00:00:00
+TKT-100234,Low,Resolved,Security,Performance issue,Issue reported: Performance issue,2023-12-29,2024-01-09,Charlie,2023-12-29 00:00:00
+TKT-100235,Low,Closed,Access,Access request,Issue reported: Access request,2021-05-13,2021-05-26,Fatima,2021-05-13 00:00:00
+TKT-100236,High,Resolved,Hardware,Login issue,Issue reported: Login issue,2021-05-22,2021-06-01,Hannah,2021-05-22 00:00:00
+TKT-100237,Low,Open,Hardware,Login issue,Issue reported: Login issue,2024-01-12,,Alice,2024-01-12 00:00:00
+TKT-100238,Low,Open,Access,Password reset,Issue reported: Password reset,2022-09-12,,Ivan,2022-09-12 00:00:00
+TKT-100239,Medium,Resolved,Network,Device not responding,Issue reported: Device not responding,2024-11-18,2024-11-30,Diana,2024-11-18 00:00:00
+TKT-100240,Medium,Resolved,Security,Application crash,Issue reported: Application crash,2024-08-23,2024-09-06,Bob,2024-08-23 00:00:00
+TKT-100241,Medium,In Progress,Access,Password reset,Issue reported: Password reset,2021-11-13,,Fatima,2021-11-13 00:00:00
+TKT-100242,Low,Open,Access,Device not responding,Issue reported: Device not responding,2020-11-11,,Ethan,2020-11-11 00:00:00
+TKT-100243,High,Resolved,Hardware,Performance issue,Issue reported: Performance issue,2023-10-23,2023-11-07,Ivan,2023-10-23 00:00:00
+TKT-100244,Critical,Open,Security,Performance issue,Issue reported: Performance issue,2022-11-24,,Ivan,2022-11-24 00:00:00
+TKT-100245,Low,Open,Hardware,Email malfunction,Issue reported: Email malfunction,2020-06-02,,Alice,2020-06-02 00:00:00
+TKT-100246,Medium,Open,Security,System failure,Issue reported: System failure,2022-05-16,,Alice,2022-05-16 00:00:00
+TKT-100247,High,Closed,Access,Application crash,Issue reported: Application crash,2024-06-12,2024-06-19,Fatima,2024-06-12 00:00:00
+TKT-100248,Critical,Resolved,Software,Device not responding,Issue reported: Device not responding,2021-09-21,2021-09-24,Bob,2021-09-21 00:00:00
+TKT-100249,High,Resolved,Access,Application crash,Issue reported: Application crash,2023-06-17,2023-07-02,Diana,2023-06-17 00:00:00
+TKT-100250,Low,Resolved,Software,Email malfunction,Issue reported: Email malfunction,2021-08-08,2021-08-12,Bob,2021-08-08 00:00:00
+TKT-100251,Medium,Open,Access,Device not responding,Issue reported: Device not responding,2022-12-08,,Ethan,2022-12-08 00:00:00
+TKT-100252,Medium,In Progress,Software,Access request,Issue reported: Access request,2021-10-20,,Fatima,2021-10-20 00:00:00
+TKT-100253,High,In Progress,Hardware,Security alert,Issue reported: Security alert,2020-08-11,,Julia,2020-08-11 00:00:00
+TKT-100254,Critical,Resolved,Security,System failure,Issue reported: System failure,2022-07-16,2022-08-03,Charlie,2022-07-16 00:00:00
+TKT-100255,Low,Open,Software,Password reset,Issue reported: Password reset,2024-11-07,,Diana,2024-11-07 00:00:00
+TKT-100256,Low,Resolved,Software,Application crash,Issue reported: Application crash,2022-01-23,2022-02-06,Hannah,2022-01-23 00:00:00
+TKT-100257,Medium,Open,Software,Network outage,Issue reported: Network outage,2022-01-13,,George,2022-01-13 00:00:00
+TKT-100258,High,In Progress,Security,Application crash,Issue reported: Application crash,2020-05-25,,Bob,2020-05-25 00:00:00
+TKT-100259,Low,Resolved,Software,Device not responding,Issue reported: Device not responding,2020-08-01,2020-08-17,Ivan,2020-08-01 00:00:00
+TKT-100260,Medium,Open,Security,Application crash,Issue reported: Application crash,2024-03-11,,Diana,2024-03-11 00:00:00
+TKT-100261,High,Open,Access,Device not responding,Issue reported: Device not responding,2020-02-17,,Hannah,2020-02-17 00:00:00
+TKT-100262,Critical,Open,Access,Device not responding,Issue reported: Device not responding,2020-12-17,,Charlie,2020-12-17 00:00:00
+TKT-100263,Critical,In Progress,Access,Performance issue,Issue reported: Performance issue,2023-01-01,,Fatima,2023-01-01 00:00:00
+TKT-100264,Medium,Open,Security,Application crash,Issue reported: Application crash,2022-05-11,,Julia,2022-05-11 00:00:00
+TKT-100265,Critical,In Progress,Hardware,Application crash,Issue reported: Application crash,2023-04-06,,Charlie,2023-04-06 00:00:00
+TKT-100266,Medium,Resolved,Access,Application crash,Issue reported: Application crash,2020-05-05,2020-05-20,Ivan,2020-05-05 00:00:00
+TKT-100267,High,Closed,Hardware,Performance issue,Issue reported: Performance issue,2024-03-30,2024-03-31,Alice,2024-03-30 00:00:00
+TKT-100268,Critical,Resolved,Hardware,System failure,Issue reported: System failure,2023-11-02,2023-11-03,Julia,2023-11-02 00:00:00
+TKT-100269,Medium,In Progress,Security,Device not responding,Issue reported: Device not responding,2020-01-19,,Diana,2020-01-19 00:00:00
+TKT-100270,High,In Progress,Access,Security alert,Issue reported: Security alert,2020-02-29,,Ethan,2020-02-29 00:00:00
+TKT-100271,High,Open,Software,Device not responding,Issue reported: Device not responding,2022-10-12,,Ethan,2022-10-12 00:00:00
+TKT-100272,High,Open,Network,Login issue,Issue reported: Login issue,2024-11-03,,Ivan,2024-11-03 00:00:00
+TKT-100273,Critical,Resolved,Access,Application crash,Issue reported: Application crash,2022-09-22,2022-09-27,George,2022-09-22 00:00:00
+TKT-100274,High,Resolved,Security,System failure,Issue reported: System failure,2022-01-17,2022-01-20,Fatima,2022-01-17 00:00:00
+TKT-100275,Critical,Closed,Access,Network outage,Issue reported: Network outage,2022-04-07,2022-04-19,Fatima,2022-04-07 00:00:00
+TKT-100276,Critical,Open,Hardware,Application crash,Issue reported: Application crash,2023-12-28,,Bob,2023-12-28 00:00:00
+TKT-100277,Low,Resolved,Hardware,Access request,Issue reported: Access request,2021-05-04,2021-05-12,George,2021-05-04 00:00:00
+TKT-100278,High,Resolved,Hardware,Network outage,Issue reported: Network outage,2023-08-06,2023-08-18,Charlie,2023-08-06 00:00:00
+TKT-100279,Low,Open,Security,Network outage,Issue reported: Network outage,2024-11-11,,Julia,2024-11-11 00:00:00
+TKT-100280,Critical,Closed,Software,Security alert,Issue reported: Security alert,2021-09-07,2021-09-21,Julia,2021-09-07 00:00:00
+TKT-100281,Critical,Open,Software,Access request,Issue reported: Access request,2020-09-28,,Charlie,2020-09-28 00:00:00
+TKT-100282,Low,Closed,Software,Login issue,Issue reported: Login issue,2020-07-24,2020-07-31,Diana,2020-07-24 00:00:00
+TKT-100283,High,Resolved,Hardware,Device not responding,Issue reported: Device not responding,2020-07-24,2020-08-09,Charlie,2020-07-24 00:00:00
+TKT-100284,Critical,Closed,Network,Password reset,Issue reported: Password reset,2020-01-15,2020-01-28,Ethan,2020-01-15 00:00:00
+TKT-100285,High,In Progress,Security,Login issue,Issue reported: Login issue,2023-09-01,,Fatima,2023-09-01 00:00:00
+TKT-100286,Medium,Open,Security,Login issue,Issue reported: Login issue,2020-07-20,,Fatima,2020-07-20 00:00:00
+TKT-100287,High,Closed,Hardware,Application crash,Issue reported: Application crash,2020-07-13,2020-07-17,Charlie,2020-07-13 00:00:00
+TKT-100288,Medium,Resolved,Network,Password reset,Issue reported: Password reset,2020-10-22,2020-10-31,Alice,2020-10-22 00:00:00
+TKT-100289,Critical,Resolved,Security,Password reset,Issue reported: Password reset,2024-07-01,2024-07-11,Fatima,2024-07-01 00:00:00
+TKT-100290,Medium,Open,Software,Performance issue,Issue reported: Performance issue,2022-11-05,,George,2022-11-05 00:00:00
+TKT-100291,Medium,Resolved,Hardware,Network outage,Issue reported: Network outage,2020-09-25,2020-10-10,Ethan,2020-09-25 00:00:00
+TKT-100292,Low,In Progress,Hardware,Application crash,Issue reported: Application crash,2021-08-27,,Charlie,2021-08-27 00:00:00
+TKT-100293,Critical,In Progress,Access,Email malfunction,Issue reported: Email malfunction,2023-10-01,,Hannah,2023-10-01 00:00:00
+TKT-100294,Critical,Closed,Hardware,Application crash,Issue reported: Application crash,2023-12-07,2023-12-24,Ethan,2023-12-07 00:00:00
+TKT-100295,Medium,Closed,Security,Security alert,Issue reported: Security alert,2020-10-28,2020-11-01,Julia,2020-10-28 00:00:00
+TKT-100296,Critical,Closed,Access,Access request,Issue reported: Access request,2022-04-06,2022-04-13,Charlie,2022-04-06 00:00:00
+TKT-100297,High,Closed,Access,Email malfunction,Issue reported: Email malfunction,2021-06-27,2021-07-09,Diana,2021-06-27 00:00:00
+TKT-100298,Critical,In Progress,Software,Application crash,Issue reported: Application crash,2022-05-18,,Alice,2022-05-18 00:00:00
+TKT-100299,Medium,Closed,Access,Performance issue,Issue reported: Performance issue,2020-09-03,2020-09-14,Ivan,2020-09-03 00:00:00
+TKT-100300,Critical,In Progress,Security,Login issue,Issue reported: Login issue,2021-11-07,,Alice,2021-11-07 00:00:00
+TKT-100301,High,In Progress,Access,Password reset,Issue reported: Password reset,2023-01-17,,Alice,2023-01-17 00:00:00
+TKT-100302,High,Closed,Hardware,System failure,Issue reported: System failure,2021-07-28,2021-08-04,George,2021-07-28 00:00:00
+TKT-100303,High,In Progress,Software,Password reset,Issue reported: Password reset,2023-01-18,,Diana,2023-01-18 00:00:00
+TKT-100304,Critical,Closed,Access,Performance issue,Issue reported: Performance issue,2021-09-19,2021-10-05,Ivan,2021-09-19 00:00:00
+TKT-100305,Low,Closed,Security,Login issue,Issue reported: Login issue,2022-10-21,2022-11-07,Julia,2022-10-21 00:00:00
+TKT-100306,Critical,Resolved,Network,System failure,Issue reported: System failure,2021-09-28,2021-10-06,Charlie,2021-09-28 00:00:00
+TKT-100307,Low,Resolved,Access,Login issue,Issue reported: Login issue,2021-12-27,2022-01-16,Diana,2021-12-27 00:00:00
+TKT-100308,Medium,Closed,Network,Network outage,Issue reported: Network outage,2022-06-24,2022-07-11,Diana,2022-06-24 00:00:00
+TKT-100309,High,Open,Security,System failure,Issue reported: System failure,2022-11-19,,Alice,2022-11-19 00:00:00
+TKT-100310,High,Closed,Security,System failure,Issue reported: System failure,2023-05-31,2023-06-04,Ethan,2023-05-31 00:00:00
+TKT-100311,Critical,In Progress,Security,Security alert,Issue reported: Security alert,2021-05-05,,Ivan,2021-05-05 00:00:00
+TKT-100312,Medium,Open,Hardware,Network outage,Issue reported: Network outage,2020-04-04,,Ethan,2020-04-04 00:00:00
+TKT-100313,High,Closed,Network,Network outage,Issue reported: Network outage,2020-05-13,2020-05-26,Charlie,2020-05-13 00:00:00
+TKT-100314,Medium,Open,Software,Security alert,Issue reported: Security alert,2022-06-14,,Alice,2022-06-14 00:00:00
+TKT-100315,Critical,Open,Access,Network outage,Issue reported: Network outage,2024-07-26,,Charlie,2024-07-26 00:00:00
+TKT-100316,High,Open,Network,System failure,Issue reported: System failure,2023-07-30,,Ivan,2023-07-30 00:00:00
+TKT-100317,Low,Closed,Security,Performance issue,Issue reported: Performance issue,2023-08-16,2023-08-29,Charlie,2023-08-16 00:00:00
+TKT-100318,Low,Open,Network,Performance issue,Issue reported: Performance issue,2021-01-12,,Bob,2021-01-12 00:00:00
+TKT-100319,Critical,In Progress,Access,Device not responding,Issue reported: Device not responding,2021-06-19,,George,2021-06-19 00:00:00
+TKT-100320,Critical,Open,Security,Performance issue,Issue reported: Performance issue,2024-02-11,,Diana,2024-02-11 00:00:00
+TKT-100321,High,Closed,Network,Access request,Issue reported: Access request,2023-12-28,2024-01-07,Alice,2023-12-28 00:00:00
+TKT-100322,Low,In Progress,Network,Password reset,Issue reported: Password reset,2021-10-01,,Hannah,2021-10-01 00:00:00
+TKT-100323,Medium,In Progress,Security,Password reset,Issue reported: Password reset,2024-07-27,,Ivan,2024-07-27 00:00:00
+TKT-100324,High,In Progress,Software,System failure,Issue reported: System failure,2022-12-17,,Hannah,2022-12-17 00:00:00
+TKT-100325,Medium,Open,Software,Performance issue,Issue reported: Performance issue,2020-07-19,,Charlie,2020-07-19 00:00:00
+TKT-100326,Low,Open,Security,Performance issue,Issue reported: Performance issue,2020-10-05,,Fatima,2020-10-05 00:00:00
+TKT-100327,Medium,Closed,Hardware,Application crash,Issue reported: Application crash,2022-03-01,2022-03-12,Ethan,2022-03-01 00:00:00
+TKT-100328,Low,Open,Access,System failure,Issue reported: System failure,2023-10-06,,Ethan,2023-10-06 00:00:00
+TKT-100329,Low,Closed,Software,Access request,Issue reported: Access request,2020-04-20,2020-04-24,Hannah,2020-04-20 00:00:00
+TKT-100330,High,In Progress,Network,Network outage,Issue reported: Network outage,2023-12-06,,Charlie,2023-12-06 00:00:00
+TKT-100331,Low,Resolved,Network,Password reset,Issue reported: Password reset,2020-04-05,2020-04-14,George,2020-04-05 00:00:00
+TKT-100332,Low,Closed,Network,Application crash,Issue reported: Application crash,2024-08-01,2024-08-10,Hannah,2024-08-01 00:00:00
+TKT-100333,High,Resolved,Network,Password reset,Issue reported: Password reset,2021-04-17,2021-05-01,George,2021-04-17 00:00:00
+TKT-100334,Critical,Open,Hardware,Password reset,Issue reported: Password reset,2020-10-27,,Ivan,2020-10-27 00:00:00
+TKT-100335,Low,In Progress,Access,Login issue,Issue reported: Login issue,2021-11-19,,Fatima,2021-11-19 00:00:00
+TKT-100336,Medium,Closed,Network,Email malfunction,Issue reported: Email malfunction,2023-01-31,2023-02-12,Alice,2023-01-31 00:00:00
+TKT-100337,Critical,Open,Software,Email malfunction,Issue reported: Email malfunction,2023-08-31,,Fatima,2023-08-31 00:00:00
+TKT-100338,Medium,Resolved,Hardware,Network outage,Issue reported: Network outage,2024-05-25,2024-06-02,Julia,2024-05-25 00:00:00
+TKT-100339,Critical,In Progress,Network,Device not responding,Issue reported: Device not responding,2020-02-09,,Alice,2020-02-09 00:00:00
+TKT-100340,High,Open,Network,Application crash,Issue reported: Application crash,2021-11-25,,Bob,2021-11-25 00:00:00
+TKT-100341,Critical,Open,Software,Password reset,Issue reported: Password reset,2022-05-23,,Alice,2022-05-23 00:00:00
+TKT-100342,Low,Resolved,Software,Login issue,Issue reported: Login issue,2020-02-11,2020-02-28,Hannah,2020-02-11 00:00:00
+TKT-100343,Critical,Resolved,Access,Network outage,Issue reported: Network outage,2020-12-10,2020-12-14,Ivan,2020-12-10 00:00:00
+TKT-100344,Critical,Closed,Network,Application crash,Issue reported: Application crash,2024-02-23,2024-02-25,Fatima,2024-02-23 00:00:00
+TKT-100345,Critical,In Progress,Software,Access request,Issue reported: Access request,2020-09-15,,Bob,2020-09-15 00:00:00
+TKT-100346,Medium,Open,Hardware,Device not responding,Issue reported: Device not responding,2022-12-31,,Bob,2022-12-31 00:00:00
+TKT-100347,Low,Resolved,Hardware,Email malfunction,Issue reported: Email malfunction,2020-12-28,2021-01-14,Bob,2020-12-28 00:00:00
+TKT-100348,High,In Progress,Access,System failure,Issue reported: System failure,2023-04-20,,Diana,2023-04-20 00:00:00
+TKT-100349,Low,Closed,Security,Email malfunction,Issue reported: Email malfunction,2023-06-27,2023-07-13,Fatima,2023-06-27 00:00:00
+TKT-100350,High,Closed,Hardware,System failure,Issue reported: System failure,2022-10-22,2022-10-31,Bob,2022-10-22 00:00:00
+TKT-100351,Medium,Closed,Hardware,Email malfunction,Issue reported: Email malfunction,2020-08-25,2020-09-10,Ivan,2020-08-25 00:00:00
+TKT-100352,Critical,In Progress,Security,Application crash,Issue reported: Application crash,2024-03-06,,Ivan,2024-03-06 00:00:00
+TKT-100353,Low,In Progress,Software,Performance issue,Issue reported: Performance issue,2023-01-26,,Fatima,2023-01-26 00:00:00
+TKT-100354,Critical,Closed,Software,Application crash,Issue reported: Application crash,2020-10-23,2020-10-26,Diana,2020-10-23 00:00:00
+TKT-100355,Medium,In Progress,Hardware,Network outage,Issue reported: Network outage,2021-09-12,,Julia,2021-09-12 00:00:00
+TKT-100356,Critical,Open,Network,Network outage,Issue reported: Network outage,2020-01-19,,Ethan,2020-01-19 00:00:00
+TKT-100357,Critical,Open,Security,Application crash,Issue reported: Application crash,2022-04-13,,Hannah,2022-04-13 00:00:00
+TKT-100358,High,In Progress,Access,Login issue,Issue reported: Login issue,2020-07-17,,George,2020-07-17 00:00:00
+TKT-100359,Low,Open,Access,Performance issue,Issue reported: Performance issue,2022-02-15,,Ivan,2022-02-15 00:00:00
+TKT-100360,Medium,Resolved,Security,Security alert,Issue reported: Security alert,2021-11-20,2021-12-07,Ethan,2021-11-20 00:00:00
+TKT-100361,Medium,Resolved,Security,Device not responding,Issue reported: Device not responding,2021-01-11,2021-01-28,Bob,2021-01-11 00:00:00
+TKT-100362,Low,Closed,Software,Security alert,Issue reported: Security alert,2024-10-30,2024-11-14,George,2024-10-30 00:00:00
+TKT-100363,Low,Closed,Network,Login issue,Issue reported: Login issue,2021-08-25,2021-09-10,Fatima,2021-08-25 00:00:00
+TKT-100364,Low,Resolved,Network,Password reset,Issue reported: Password reset,2024-06-21,2024-06-27,Bob,2024-06-21 00:00:00
+TKT-100365,Critical,Closed,Hardware,Performance issue,Issue reported: Performance issue,2023-03-12,2023-03-13,Charlie,2023-03-12 00:00:00
+TKT-100366,High,In Progress,Security,Access request,Issue reported: Access request,2024-06-27,,Diana,2024-06-27 00:00:00
+TKT-100367,High,Resolved,Network,Login issue,Issue reported: Login issue,2020-09-24,2020-10-06,Fatima,2020-09-24 00:00:00
+TKT-100368,Medium,Open,Security,Email malfunction,Issue reported: Email malfunction,2020-10-19,,Hannah,2020-10-19 00:00:00
+TKT-100369,Critical,In Progress,Security,Access request,Issue reported: Access request,2022-11-30,,Julia,2022-11-30 00:00:00
+TKT-100370,Critical,Closed,Access,Security alert,Issue reported: Security alert,2023-06-05,2023-06-21,Hannah,2023-06-05 00:00:00
+TKT-100371,Critical,In Progress,Security,System failure,Issue reported: System failure,2022-11-15,,Julia,2022-11-15 00:00:00
+TKT-100372,Critical,Closed,Software,System failure,Issue reported: System failure,2020-08-12,2020-08-18,Alice,2020-08-12 00:00:00
+TKT-100373,High,In Progress,Security,Application crash,Issue reported: Application crash,2024-11-08,,Fatima,2024-11-08 00:00:00
+TKT-100374,Low,In Progress,Network,Device not responding,Issue reported: Device not responding,2023-06-08,,George,2023-06-08 00:00:00
+TKT-100375,High,Closed,Hardware,Login issue,Issue reported: Login issue,2022-02-27,2022-03-03,Julia,2022-02-27 00:00:00
+TKT-100376,High,Closed,Security,Security alert,Issue reported: Security alert,2020-04-26,2020-05-04,Charlie,2020-04-26 00:00:00
+TKT-100377,Medium,Resolved,Software,Email malfunction,Issue reported: Email malfunction,2020-01-29,2020-02-15,Alice,2020-01-29 00:00:00
+TKT-100378,Critical,Closed,Security,Email malfunction,Issue reported: Email malfunction,2021-01-23,2021-02-01,George,2021-01-23 00:00:00
+TKT-100379,Medium,In Progress,Network,Password reset,Issue reported: Password reset,2022-12-01,,Charlie,2022-12-01 00:00:00
+TKT-100380,Critical,In Progress,Hardware,Access request,Issue reported: Access request,2020-08-25,,Ethan,2020-08-25 00:00:00
+TKT-100381,High,In Progress,Network,Password reset,Issue reported: Password reset,2022-03-01,,Ivan,2022-03-01 00:00:00
+TKT-100382,Critical,Closed,Software,Performance issue,Issue reported: Performance issue,2024-07-30,2024-08-19,Diana,2024-07-30 00:00:00
+TKT-100383,Low,In Progress,Hardware,Security alert,Issue reported: Security alert,2021-10-11,,Charlie,2021-10-11 00:00:00
+TKT-100384,Medium,In Progress,Network,Access request,Issue reported: Access request,2020-06-16,,George,2020-06-16 00:00:00
+TKT-100385,Low,Resolved,Access,Network outage,Issue reported: Network outage,2024-09-27,2024-10-15,Diana,2024-09-27 00:00:00
+TKT-100386,High,Open,Software,Email malfunction,Issue reported: Email malfunction,2021-09-14,,Charlie,2021-09-14 00:00:00
+TKT-100387,Medium,In Progress,Security,Device not responding,Issue reported: Device not responding,2023-04-14,,Bob,2023-04-14 00:00:00
+TKT-100388,High,Resolved,Network,Network outage,Issue reported: Network outage,2021-05-13,2021-05-28,George,2021-05-13 00:00:00
+TKT-100389,High,In Progress,Hardware,Network outage,Issue reported: Network outage,2021-10-13,,Bob,2021-10-13 00:00:00
+TKT-100390,Critical,Open,Access,Network outage,Issue reported: Network outage,2020-03-11,,Ivan,2020-03-11 00:00:00
+TKT-100391,Critical,Closed,Network,System failure,Issue reported: System failure,2023-12-14,2023-12-24,Ivan,2023-12-14 00:00:00
+TKT-100392,Low,Open,Security,Access request,Issue reported: Access request,2024-10-30,,Hannah,2024-10-30 00:00:00
+TKT-100393,Critical,Open,Hardware,Application crash,Issue reported: Application crash,2023-09-09,,Diana,2023-09-09 00:00:00
+TKT-100394,Low,Resolved,Network,Login issue,Issue reported: Login issue,2020-05-05,2020-05-18,Bob,2020-05-05 00:00:00
+TKT-100395,Critical,Resolved,Network,Device not responding,Issue reported: Device not responding,2022-10-11,2022-10-29,Ivan,2022-10-11 00:00:00
+TKT-100396,Low,Open,Hardware,Access request,Issue reported: Access request,2024-09-16,,Hannah,2024-09-16 00:00:00
+TKT-100397,Medium,Resolved,Software,Password reset,Issue reported: Password reset,2023-01-01,2023-01-12,Hannah,2023-01-01 00:00:00
+TKT-100398,Low,Open,Network,Password reset,Issue reported: Password reset,2024-06-11,,George,2024-06-11 00:00:00
+TKT-100399,High,Closed,Software,Device not responding,Issue reported: Device not responding,2022-09-01,2022-09-05,Alice,2022-09-01 00:00:00
+TKT-100400,Low,Open,Network,Email malfunction,Issue reported: Email malfunction,2022-09-19,,Bob,2022-09-19 00:00:00
+TKT-100401,Medium,Closed,Software,Password reset,Issue reported: Password reset,2022-10-11,2022-10-25,Diana,2022-10-11 00:00:00
+TKT-100402,Critical,In Progress,Hardware,Password reset,Issue reported: Password reset,2021-06-04,,Bob,2021-06-04 00:00:00
+TKT-100403,Critical,Closed,Network,System failure,Issue reported: System failure,2021-07-16,2021-07-30,George,2021-07-16 00:00:00
+TKT-100404,Medium,Closed,Hardware,Security alert,Issue reported: Security alert,2021-12-23,2022-01-08,Diana,2021-12-23 00:00:00
+TKT-100405,Critical,Resolved,Hardware,Network outage,Issue reported: Network outage,2021-09-12,2021-09-17,Hannah,2021-09-12 00:00:00
+TKT-100406,Low,Closed,Security,Application crash,Issue reported: Application crash,2021-11-21,2021-12-05,Diana,2021-11-21 00:00:00
+TKT-100407,Critical,Resolved,Hardware,Security alert,Issue reported: Security alert,2022-07-18,2022-07-25,Hannah,2022-07-18 00:00:00
+TKT-100408,Medium,Open,Access,Network outage,Issue reported: Network outage,2022-12-10,,Alice,2022-12-10 00:00:00
+TKT-100409,Critical,Resolved,Security,Security alert,Issue reported: Security alert,2023-01-02,2023-01-07,Ethan,2023-01-02 00:00:00
+TKT-100410,Medium,Resolved,Access,Email malfunction,Issue reported: Email malfunction,2021-11-02,2021-11-13,George,2021-11-02 00:00:00
+TKT-100411,High,Resolved,Security,System failure,Issue reported: System failure,2020-03-11,2020-03-30,Bob,2020-03-11 00:00:00
+TKT-100412,Medium,Closed,Security,Security alert,Issue reported: Security alert,2020-03-14,2020-03-15,Ethan,2020-03-14 00:00:00
+TKT-100413,Critical,In Progress,Software,Access request,Issue reported: Access request,2021-08-26,,Ethan,2021-08-26 00:00:00
+TKT-100414,Critical,Resolved,Security,Application crash,Issue reported: Application crash,2022-01-01,2022-01-18,Charlie,2022-01-01 00:00:00
+TKT-100415,Critical,Open,Access,Password reset,Issue reported: Password reset,2023-01-03,,Diana,2023-01-03 00:00:00
+TKT-100416,Low,In Progress,Software,System failure,Issue reported: System failure,2020-05-19,,Charlie,2020-05-19 00:00:00
+TKT-100417,High,Closed,Security,Login issue,Issue reported: Login issue,2021-10-17,2021-10-28,Ethan,2021-10-17 00:00:00
+TKT-100418,Medium,In Progress,Security,Email malfunction,Issue reported: Email malfunction,2022-01-18,,Hannah,2022-01-18 00:00:00
+TKT-100419,Critical,Resolved,Hardware,Device not responding,Issue reported: Device not responding,2020-06-10,2020-06-26,Alice,2020-06-10 00:00:00
+TKT-100420,Medium,Resolved,Access,Application crash,Issue reported: Application crash,2024-06-17,2024-06-18,Hannah,2024-06-17 00:00:00
+TKT-100421,Low,In Progress,Network,Security alert,Issue reported: Security alert,2021-03-20,,Ivan,2021-03-20 00:00:00
+TKT-100422,Medium,Closed,Security,Device not responding,Issue reported: Device not responding,2022-06-02,2022-06-16,Fatima,2022-06-02 00:00:00
+TKT-100423,Medium,Closed,Network,Access request,Issue reported: Access request,2022-12-07,2022-12-18,Alice,2022-12-07 00:00:00
+TKT-100424,Critical,In Progress,Hardware,Device not responding,Issue reported: Device not responding,2023-01-16,,Hannah,2023-01-16 00:00:00
+TKT-100425,Low,In Progress,Security,Password reset,Issue reported: Password reset,2022-08-30,,Charlie,2022-08-30 00:00:00
+TKT-100426,Medium,Closed,Hardware,Login issue,Issue reported: Login issue,2020-10-14,2020-10-18,Bob,2020-10-14 00:00:00
+TKT-100427,High,Open,Access,Email malfunction,Issue reported: Email malfunction,2023-07-11,,Julia,2023-07-11 00:00:00
+TKT-100428,Medium,Open,Security,System failure,Issue reported: System failure,2020-01-16,,Hannah,2020-01-16 00:00:00
+TKT-100429,High,Closed,Access,System failure,Issue reported: System failure,2024-08-22,2024-09-09,Charlie,2024-08-22 00:00:00
+TKT-100430,High,In Progress,Security,Application crash,Issue reported: Application crash,2023-01-25,,Charlie,2023-01-25 00:00:00
+TKT-100431,Low,Open,Security,Access request,Issue reported: Access request,2021-08-02,,Charlie,2021-08-02 00:00:00
+TKT-100432,Low,In Progress,Network,Network outage,Issue reported: Network outage,2022-09-24,,George,2022-09-24 00:00:00
+TKT-100433,Low,Closed,Network,Security alert,Issue reported: Security alert,2020-11-12,2020-11-16,Ivan,2020-11-12 00:00:00
+TKT-100434,High,Resolved,Hardware,Login issue,Issue reported: Login issue,2023-10-15,2023-11-03,George,2023-10-15 00:00:00
+TKT-100435,Low,Open,Access,Application crash,Issue reported: Application crash,2020-11-30,,Bob,2020-11-30 00:00:00
+TKT-100436,High,In Progress,Software,Password reset,Issue reported: Password reset,2022-12-21,,Alice,2022-12-21 00:00:00
+TKT-100437,High,Open,Hardware,Device not responding,Issue reported: Device not responding,2023-09-24,,Julia,2023-09-24 00:00:00
+TKT-100438,Low,Resolved,Security,System failure,Issue reported: System failure,2024-05-20,2024-06-01,Alice,2024-05-20 00:00:00
+TKT-100439,Critical,In Progress,Software,Login issue,Issue reported: Login issue,2022-02-28,,Ethan,2022-02-28 00:00:00
+TKT-100440,Medium,Open,Access,Performance issue,Issue reported: Performance issue,2024-07-10,,George,2024-07-10 00:00:00
+TKT-100441,Critical,Closed,Hardware,System failure,Issue reported: System failure,2022-05-26,2022-06-15,Bob,2022-05-26 00:00:00
+TKT-100442,Critical,In Progress,Software,Performance issue,Issue reported: Performance issue,2020-09-23,,Charlie,2020-09-23 00:00:00
+TKT-100443,Medium,Resolved,Software,Network outage,Issue reported: Network outage,2021-09-01,2021-09-06,Ivan,2021-09-01 00:00:00
+TKT-100444,Medium,In Progress,Security,System failure,Issue reported: System failure,2023-06-22,,Alice,2023-06-22 00:00:00
+TKT-100445,Low,In Progress,Security,Security alert,Issue reported: Security alert,2020-11-13,,Ivan,2020-11-13 00:00:00
+TKT-100446,High,Resolved,Software,Device not responding,Issue reported: Device not responding,2023-12-04,2023-12-07,Charlie,2023-12-04 00:00:00
+TKT-100447,Medium,In Progress,Hardware,Login issue,Issue reported: Login issue,2023-12-02,,Julia,2023-12-02 00:00:00
+TKT-100448,Medium,In Progress,Software,Security alert,Issue reported: Security alert,2023-02-09,,George,2023-02-09 00:00:00
+TKT-100449,Critical,Resolved,Network,Application crash,Issue reported: Application crash,2023-10-02,2023-10-12,Ethan,2023-10-02 00:00:00
+TKT-100450,Low,Open,Hardware,Login issue,Issue reported: Login issue,2020-12-16,,Ethan,2020-12-16 00:00:00
+TKT-100451,Critical,Open,Software,System failure,Issue reported: System failure,2020-06-20,,Diana,2020-06-20 00:00:00
+TKT-100452,Critical,Resolved,Security,Access request,Issue reported: Access request,2022-03-12,2022-03-14,Fatima,2022-03-12 00:00:00
+TKT-100453,Critical,Open,Software,System failure,Issue reported: System failure,2021-06-11,,Charlie,2021-06-11 00:00:00
+TKT-100454,Medium,Open,Security,Security alert,Issue reported: Security alert,2023-08-27,,Ethan,2023-08-27 00:00:00
+TKT-100455,Critical,Open,Access,Password reset,Issue reported: Password reset,2022-11-25,,George,2022-11-25 00:00:00
+TKT-100456,Low,In Progress,Hardware,Password reset,Issue reported: Password reset,2024-02-22,,George,2024-02-22 00:00:00
+TKT-100457,High,In Progress,Security,Performance issue,Issue reported: Performance issue,2022-08-02,,Charlie,2022-08-02 00:00:00
+TKT-100458,Medium,Closed,Security,Device not responding,Issue reported: Device not responding,2022-01-22,2022-01-28,Ethan,2022-01-22 00:00:00
+TKT-100459,High,Resolved,Hardware,Security alert,Issue reported: Security alert,2021-05-19,2021-06-05,Julia,2021-05-19 00:00:00
+TKT-100460,Critical,Closed,Hardware,System failure,Issue reported: System failure,2020-01-02,2020-01-03,Alice,2020-01-02 00:00:00
+TKT-100461,High,Open,Security,Login issue,Issue reported: Login issue,2023-09-16,,Hannah,2023-09-16 00:00:00
+TKT-100462,High,In Progress,Access,Email malfunction,Issue reported: Email malfunction,2021-03-24,,Ivan,2021-03-24 00:00:00
+TKT-100463,Low,Open,Network,Password reset,Issue reported: Password reset,2020-07-14,,Diana,2020-07-14 00:00:00
+TKT-100464,High,Closed,Hardware,System failure,Issue reported: System failure,2022-12-12,2022-12-22,Ivan,2022-12-12 00:00:00
+TKT-100465,High,Closed,Software,Network outage,Issue reported: Network outage,2022-09-18,2022-10-05,Bob,2022-09-18 00:00:00
+TKT-100466,High,Open,Access,Application crash,Issue reported: Application crash,2024-01-10,,Alice,2024-01-10 00:00:00
+TKT-100467,Critical,Resolved,Network,Performance issue,Issue reported: Performance issue,2020-01-16,2020-01-20,George,2020-01-16 00:00:00
+TKT-100468,Critical,In Progress,Security,Performance issue,Issue reported: Performance issue,2020-01-19,,Julia,2020-01-19 00:00:00
+TKT-100469,Medium,Open,Hardware,Login issue,Issue reported: Login issue,2023-09-27,,Ethan,2023-09-27 00:00:00
+TKT-100470,Critical,Closed,Network,Performance issue,Issue reported: Performance issue,2022-08-10,2022-08-16,Julia,2022-08-10 00:00:00
+TKT-100471,Medium,Resolved,Access,Application crash,Issue reported: Application crash,2024-10-26,2024-10-31,Fatima,2024-10-26 00:00:00
+TKT-100472,Critical,Open,Network,Device not responding,Issue reported: Device not responding,2022-11-18,,Fatima,2022-11-18 00:00:00
+TKT-100473,Medium,Open,Access,Application crash,Issue reported: Application crash,2023-08-24,,Hannah,2023-08-24 00:00:00
+TKT-100474,Medium,Open,Network,Login issue,Issue reported: Login issue,2021-11-21,,Ivan,2021-11-21 00:00:00
+TKT-100475,Critical,In Progress,Network,Device not responding,Issue reported: Device not responding,2020-02-21,,Diana,2020-02-21 00:00:00
+TKT-100476,Medium,Closed,Network,System failure,Issue reported: System failure,2023-05-18,2023-06-01,Ethan,2023-05-18 00:00:00
+TKT-100477,Medium,In Progress,Security,Email malfunction,Issue reported: Email malfunction,2024-02-08,,George,2024-02-08 00:00:00
+TKT-100478,High,In Progress,Access,Network outage,Issue reported: Network outage,2022-09-23,,Hannah,2022-09-23 00:00:00
+TKT-100479,Critical,Open,Network,Performance issue,Issue reported: Performance issue,2022-01-29,,Hannah,2022-01-29 00:00:00
+TKT-100480,High,Open,Network,System failure,Issue reported: System failure,2021-02-13,,Bob,2021-02-13 00:00:00
+TKT-100481,Critical,In Progress,Software,Password reset,Issue reported: Password reset,2021-07-13,,Alice,2021-07-13 00:00:00
+TKT-100482,Critical,Open,Access,Login issue,Issue reported: Login issue,2020-06-10,,Hannah,2020-06-10 00:00:00
+TKT-100483,Critical,Open,Security,Performance issue,Issue reported: Performance issue,2022-10-25,,Bob,2022-10-25 00:00:00
+TKT-100484,Critical,In Progress,Security,Performance issue,Issue reported: Performance issue,2023-06-05,,Ivan,2023-06-05 00:00:00
+TKT-100485,Low,In Progress,Access,Login issue,Issue reported: Login issue,2020-11-28,,Hannah,2020-11-28 00:00:00
+TKT-100486,Medium,Open,Software,Email malfunction,Issue reported: Email malfunction,2020-09-08,,Ethan,2020-09-08 00:00:00
+TKT-100487,High,In Progress,Network,Access request,Issue reported: Access request,2023-10-01,,Alice,2023-10-01 00:00:00
+TKT-100488,Critical,In Progress,Access,Application crash,Issue reported: Application crash,2021-08-11,,Diana,2021-08-11 00:00:00
+TKT-100489,High,Open,Security,Security alert,Issue reported: Security alert,2024-07-23,,Ethan,2024-07-23 00:00:00
+TKT-100490,High,Open,Hardware,Password reset,Issue reported: Password reset,2020-12-12,,George,2020-12-12 00:00:00
+TKT-100491,Medium,Open,Hardware,Performance issue,Issue reported: Performance issue,2020-02-17,,Ethan,2020-02-17 00:00:00
+TKT-100492,Medium,Closed,Security,Network outage,Issue reported: Network outage,2023-07-19,2023-08-05,Alice,2023-07-19 00:00:00
+TKT-100493,Low,In Progress,Hardware,Security alert,Issue reported: Security alert,2023-03-19,,Fatima,2023-03-19 00:00:00
+TKT-100494,Critical,Open,Network,Network outage,Issue reported: Network outage,2022-10-24,,Diana,2022-10-24 00:00:00
+TKT-100495,Low,In Progress,Access,Login issue,Issue reported: Login issue,2020-04-23,,Ivan,2020-04-23 00:00:00
+TKT-100496,Medium,Open,Software,Performance issue,Issue reported: Performance issue,2022-05-01,,Julia,2022-05-01 00:00:00
+TKT-100497,Critical,In Progress,Hardware,Network outage,Issue reported: Network outage,2022-11-10,,Alice,2022-11-10 00:00:00
+TKT-100498,Low,In Progress,Network,Password reset,Issue reported: Password reset,2020-08-03,,Charlie,2020-08-03 00:00:00
+TKT-100499,Low,In Progress,Hardware,Access request,Issue reported: Access request,2020-09-26,,Ethan,2020-09-26 00:00:00

@@ -1,0 +1,11 @@
+pandas
+streamlit
+openai
+numpy
+datetime
+pathlib
+matplotlib
+sqlite3
+secrets
+bcrypt
+re
