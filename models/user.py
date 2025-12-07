@@ -1,3 +1,5 @@
+import bcrypt
+from services.database_manager import DatabaseManager
 class User:
     """Represents a user in the Multi-Domain Intelligence Platform."""
 
@@ -12,10 +14,14 @@ class User:
     def get_role(self) -> str:
         return self.__role
     
-    def verify_password(self, plain_password: str, hasher) -> bool:
-        """Check if a plain-text password matches this user's hash."""
-
-        return hasher.check_password(plain_password, self.__password_hash)
+    #CHECKING PASSWORD
+    def verify_password(self, plain_text_password: str) -> bool:
+        """Returns True, if passwords match and False, if not."""
+        # bcrypt.checkpw returns True if password matches, False otherwise
+        return bcrypt.checkpw(
+            plain_text_password.encode("utf-8"),
+            self.__password_hash.encode("utf-8")
+        )
     
     def __str__(self) -> str:
         return f"User({self.__username}, role={self.__role})"

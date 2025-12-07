@@ -1,9 +1,7 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 from openai import OpenAI
-from user_handling.db import connect_database
-from data.datasets import get_all_datasets
+from models.dataset import Dataset
+from services.database_manager import DatabaseManager
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="📁📊📈Datasets Analytics📈📊📁", page_icon="📊📈", layout="wide")
@@ -21,17 +19,18 @@ if not st.session_state.logged_in:
         st.switch_page("Home.py") # back to the first page
     st.stop()
 
-
-
-
 st.header("📁📊📈Datasets Analytics📈📊📁")
 
+#connecting database through DatabaseManager class
+db = DatabaseManager()
+#creating an instance of dataset
+dataset_model = Dataset(dataset_id=0, name="", size_bytes=0, rows=0, source="", db=db)
 
 col1, col2 = st.columns(2)
 
 with col1:
     #getting the data
-    df = get_all_datasets()
+    df = dataset_model.get_all_datasets()
 
     #first graph
     st.subheader("Record Count per Dataset")
@@ -114,8 +113,7 @@ with col2:
     st.title("🔍 AI Dataset Analyzer")
 
     # ═══════════════════════════════════════════════# STEP 1: Fetch datasets from Week 8 database# ═══════════════════════════════════════════════
-    datasets = get_all_datasets()
-    conn = connect_database()
+    datasets = dataset_model.get_all_datasets()
 
     datasets = datasets.to_dict(orient="records") 
     if datasets:

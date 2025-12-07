@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import datetime
-from data.schema import create_all_tables
+from services.database_manager import DatabaseManager
 
 st.set_page_config(page_title="Dashboard", page_icon="📋", layout="wide")
 
@@ -12,8 +12,10 @@ if "logged_in" not in st.session_state:
 if "username" not in st.session_state:
     st.session_state.username = ""
 
-#Ensure all tables exist
-create_all_tables()
+#connecting database through DatabaseManager class
+db = DatabaseManager()
+#ensure all tables are created
+db.create_all_tables()
 
 # Guard: if not logged in, send user back
 if not st.session_state.logged_in:

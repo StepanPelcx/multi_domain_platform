@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from data.datasets import migrate_datasets, insert_dataset, delete_dataset, update_dataset_record_count, get_datasets_by_category_count, get_repeating_dataset_categories, get_all_datasets
+from models.dataset import Dataset
+from services.database_manager import DatabaseManager
 
 st.set_page_config(page_title="📁Datasets Dashboard📁", page_icon="📁📋", layout="wide")
 
@@ -17,8 +18,6 @@ if not st.session_state.logged_in:
     if st.button("Go to login page"):
         st.switch_page("Home.py") # back to the first page
     st.stop()
-
-
 
 st.header("📁Datasets Dashboard📁")
 
@@ -44,9 +43,21 @@ with st.sidebar:
 st.subheader("Migrate Datasets From CSV File")
 st.info("Make sure CSV file is migrated before working with other functions.")
 
+
+
+#============================================================================================================================================
+# CRUD Functions
+#============================================================================================================================================
+
+#connecting database through DatabaseManager class
+db = DatabaseManager()
+#creating an instance of dataset
+dataset_model = Dataset(dataset_id=0, name="", size_bytes=0, rows=0, source="", db=db)
+
+
 # Button to trigger migration
 if st.button("🚀 Migrate Datasets"):
-    migration = migrate_datasets()
+    migration = dataset_model.migrate_datasets()
 
     if migration:
         st.success("✅All incidents migrated.✅")
@@ -54,11 +65,7 @@ if st.button("🚀 Migrate Datasets"):
         st.error("❌Was not able to migrate the incidents.❌")
 
 
-#============================================================================================================================================
-# CRUD Functions
-#============================================================================================================================================
-
-
+#Insert a dataset
 st.subheader("Insert Dataset")
 
 with st.form("dataset form"):
@@ -79,7 +86,7 @@ if insert_dataset_button:
         st.error("❌ Please enter values for all required inputs. ❌")
 
     else:
-        dataset_id = insert_dataset(
+        dataset_id = dataset_model.insert_dataset(
             dataset_name=dataset_name,
             category=category,
             source=source,
@@ -92,6 +99,7 @@ if insert_dataset_button:
         st.success(f"✅ Dataset successfully added with ID: {dataset_id} ✅")
 
 
+#Deleting a dataset
 st.subheader("Delete Dataset")
 
 with st.form("delete dataset form"):
@@ -104,14 +112,14 @@ if delete_dataset_button:
     if not dataset_id:
         st.error("❌ Please enter a valid Dataset ID. ❌")
     else:
-        rows_deleted = delete_dataset(int(dataset_id))
+        rows_deleted = dataset_model.delete_dataset(int(dataset_id))
 
         if rows_deleted > 0:
             st.success(f"✅ Dataset with ID {dataset_id} was successfully deleted!✅")
         else:
             st.error(f"❌ No dataset found with ID {dataset_id}.")
 
-
+#Update a dataset record count
 st.subheader("Update Dataset Record Count")
 
 with st.form("update dataset form"):
@@ -125,7 +133,7 @@ if update_button:
     if not dataset_id or new_record_count is None:
         st.error("❌ Please enter valid values for all fields. ❌")
     else:
-        rows_updated = update_dataset_record_count(dataset_id=int(dataset_id),new_record_count=int(new_record_count),)
+        rows_updated = dataset_model.update_dataset_record_count(dataset_id=int(dataset_id),new_record_count=int(new_record_count),)
 
         if rows_updated > 0:
             st.success(
@@ -136,7 +144,7 @@ if update_button:
         else:
             st.error(f"❌ No dataset found with ID {dataset_id}. Update failed.❌")
 
-
+#Getting df with category count
 st.subheader("Dataset Count by Category")
 
 with st.form("Get datasets by category count"):
@@ -145,10 +153,10 @@ with st.form("Get datasets by category count"):
 
 if get_datasets_by_category_count_button:
     #get data from database
-    df_category = get_datasets_by_category_count()
+    df_category = dataset_model.get_datasets_by_category_count()
 
     if df_category.empty:
-        st.warning("❌No dataset metadata found.❌")
+        st.warning("❌No datasets found.❌")
     else:
         #displaying raw data
         st.dataframe(df_category)
@@ -156,6 +164,7 @@ if get_datasets_by_category_count_button:
         st.bar_chart(df_category.set_index("category")["count"])
 
 
+#Getting datasets categories with X count
 st.subheader("Repeating Dataset Categories")
 
 with st.form("repeating categories form"):
@@ -165,7 +174,7 @@ with st.form("repeating categories form"):
     submit_button = st.form_submit_button("Show Results")
 #displaying
 if submit_button:
-    df_repeating = get_repeating_dataset_categories(min_count=min_count)
+    df_repeating = dataset_model.get_repeating_dataset_categories(min_count=min_count)
 
     if df_repeating.empty:
         st.warning(f"❌No categories found with more than {min_count} datasets.❌")
@@ -176,6 +185,7 @@ if submit_button:
         st.bar_chart(df_repeating.set_index("category")["count"])
 
 
+#Getting all datasets
 st.subheader("View All Datasets")
 
 with st.form("view all datasets"):
@@ -183,7 +193,7 @@ with st.form("view all datasets"):
     load_button = st.form_submit_button("Load All Datasets")
 #displaying
 if load_button:
-    df_all = get_all_datasets()
+    df_all = dataset_model.get_all_datasets()
 
     if df_all.empty:
         st.warning("❌No datasets found in the database.❌")

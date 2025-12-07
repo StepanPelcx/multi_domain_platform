@@ -132,8 +132,8 @@ if st.button("All users info"):
 
 if st.session_state.get_all_users:
     user_role = get_user_role(st.session_state.username)
-    if user_role != "admin":
-        st.error('❌Only "admin" users can view this.❌')
+    if user_role != "Admin":
+        st.error('❌Only "Admin" users can view this.❌')
         st.session_state.get_all_users = False
         st.stop()
     else:
