@@ -1,5 +1,6 @@
 import sqlite3
 from typing import Any, Iterable
+
 class DatabaseManager:
     """Handles SQLite database connections and queries."""
 
