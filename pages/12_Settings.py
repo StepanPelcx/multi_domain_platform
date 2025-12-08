@@ -38,7 +38,7 @@ with st.sidebar:
     if not st.session_state.logged_in:
         st.error("You must be logged in...")
         st.switch_page("Home.py")
-        st.stop()
+        st.rerun()
 
 # Sidebar back to dashboard button
 with st.sidebar:
@@ -66,29 +66,29 @@ if st.session_state.show_password_change:
     if back:
         st.session_state.show_password_change = False
         del st.session_state.confirm_password_change
-        st.stop()
+        st.rerun()
 
     if change:
         #printing error if the user did not input some values
         if not password or not new_password or not confirmation:
             st.error("❌You did not enter some of the required passwords.❌")
-            st.stop()
+            st.rerun()
         #checking if the new password is different from the old one
         if password == new_password:
             st.error("❌New password is the same as the old one.❌")
-            st.stop()
+            st.rerun()
         #verifying the current password from user
         if not verify_password(st.session_state.username, password):
             st.error("❌Incorrect current password.❌")
-            st.stop()
+            st.rerun()
         #checking the user input
         if new_password != confirmation:
             st.error("❌Your new password does not match❌")
-            st.stop()
+            st.rerun()
         #checking if the password satisfy required conditions
         if not validate_password(new_password):
             st.error("❌Your password must satisfy those conditions: password must have from 8 to 24 characters long.❌\n❌It must contain at least one upper letter, one lower letter, one number, and one special character.❌")
-            st.stop()
+            st.rerun()
 
         #after validation confirm the user wants to change password
         st.session_state.confirm_password_change = True
@@ -104,13 +104,13 @@ if st.session_state.show_password_change:
                     st.success("✅Your password changed successfuly!✅")
                     st.session_state.show_password_change = False
                     del st.session_state.confirm_password_change
-                    st.stop()
+                    st.rerun()
                 else:
                     st.error("❌Failed to update the password in database.❌")
             if st.button("Cancel"):
                 st.session_state.show_password_change = False
                 del st.session_state.confirm_password_change
-                st.stop()
+                st.rerun()
 
 #button for getting user role
 if st.button("👤User role👤"):
@@ -122,7 +122,7 @@ if st.session_state.get_user_role:
     st.info(f"The users role is '{get_user_role(st.session_state.username)}'")
     if st.button("Done"):
         st.session_state.get_user_role = False
-        st.stop()
+        st.rerun()
 
 
 #users df, if admin get all the users info
@@ -135,9 +135,9 @@ if st.session_state.get_all_users:
     if user_role != "Admin":
         st.error('❌Only "Admin" users can view this.❌')
         st.session_state.get_all_users = False
-        st.stop()
+        st.rerun()
     else:
         st.dataframe(get_all_users_info())
         if st.button("Back"):
             st.session_state.get_all_users = False
-            st.stop()
+            st.rerun()

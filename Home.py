@@ -1,12 +1,6 @@
 import streamlit as st
-from openai import OpenAI
 from services.database_manager import DatabaseManager
 from services.auth_manager import AuthManager
-
-api_key = st.secrets["OPENAI_API_KEY"]
-client = OpenAI(api_key=api_key)
-
-
 
 st.set_page_config(page_title="Login / Register", page_icon="🔑", layout="centered")
 

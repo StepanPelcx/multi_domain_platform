@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 import datetime
 from services.database_manager import DatabaseManager
 
@@ -67,27 +65,33 @@ st.subheader("Please choose which data you want to work with")
 #columns for user to choose between dataset
 col1, col2, col3 = st.columns(3)
 
+#Cyber incidents column
 with col1:
     st.subheader("🛡️Cyber Security🛡️")
+    #button for selection
     security = st.button("Choose", key="security")
     st.text('Click "Choose" to be redirected to Cyber Security page.')
     st.image("images/security.jpg", use_container_width=True)
     if security:
-        st.switch_page("pages/3_Cyber_Security_Dashboard.py")
+        st.switch_page("pages/3_Cyber_Security.py")
 
+#Datasets column
 with col2:
     st.subheader("📁Datasets📁")
+    #button for selection
     datasets = st.button("Choose", key="datasets")
     st.text('Click "Choose" to be redirected to Datasets page.')
     st.image("images/datasets.jpg", use_container_width=True)
     if datasets:
-        st.switch_page("pages/6_Datasets_Dashboard.py")
+        st.switch_page("pages/6_Datasets_Metadata.py")
 
+#IT Tickets column
 with col3:
     st.subheader("🎟️Tickets🎟️")
+    #button for selection
     tickets = st.button("Choose", key="tickets")
     st.text('Click "Choose" to be redirected to Tickets page.')
     st.image("images/tickets.jpg", use_container_width=True)
     if tickets:
-        st.switch_page("pages/9_Tickets_Dashboard.py")
+        st.switch_page("pages/9_IT_Tickets.py")
 

@@ -28,6 +28,11 @@ class Dataset:
         size_mb = self.calculate_size_mb()
         return f"Dataset {self.__id}: {self.__name} ({size_mb:.2f} MB, {self.__rows} rows)"
     
+# =======================
+# CRUD FUNCTIONS
+# =======================
+
+    #INSERT DATASET   
     def insert_dataset(self, dataset_name, category, source, last_updated, record_count, file_size_mb, created_at):
         """Insert a new dataset into the database."""
         cur = self.__db.execute_query(
@@ -40,7 +45,7 @@ class Dataset:
         )
         return cur.lastrowid
 
-
+    #GET ALL DATASETS
     def get_all_datasets(self):
         """Get all incidents as DataFrame."""
         rows = self.__db.fetch_all(
@@ -61,7 +66,7 @@ class Dataset:
             ]
         )
 
-
+    #UPDATE RECORD COUNT
     def update_dataset_record_count(self, dataset_id, new_record_count):
         """Update the record count of a dataset."""
         last_updated = date.today()
@@ -75,7 +80,7 @@ class Dataset:
         )
         return cur.rowcount
 
-
+    #DELETE DATASET
     def delete_dataset(self, dataset_id):
         """Delete a dataset from the database."""
         cur = self.__db.execute_query(
@@ -84,7 +89,7 @@ class Dataset:
         )
         return cur.rowcount
 
-
+    #GET DATASETS BY CATEGORY COUNT
     def get_datasets_by_category_count(self):
         """Returns a df grouped by category."""
         rows = self.__db.fetch_all(
@@ -99,7 +104,7 @@ class Dataset:
         # Convert to DataFrame
         return pd.DataFrame(rows, columns=["category", "count"])
 
-
+    #GET REPEATING DATASET CATEGORIES
     def get_repeating_dataset_categories(self, min_count=5):
         """Returns a df with categories with more then X samples."""
         rows = self.__db.fetch_all(
@@ -116,7 +121,7 @@ class Dataset:
         # Convert to DataFrame
         return pd.DataFrame(rows, columns=["category", "count"])
 
-
+    #MIGRATE CSV DATASETS TO DB
     def migrate_datasets(self):
         """Migrates all datasets info from the CSV file."""
         #getting the path
