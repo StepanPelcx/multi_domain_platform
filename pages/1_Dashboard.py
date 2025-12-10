@@ -47,7 +47,7 @@ st.markdown(
 )
 #button for swithing to settings
 if st.button("⚙️Settings⚙️"):
-    st.switch_page("pages/12_Settings.py")
+    st.switch_page("pages/5_Settings.py")
         
 
 #Showing success login only once
@@ -69,29 +69,29 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("🛡️Cyber Security🛡️")
     #button for selection
-    security = st.button("Choose", key="security")
+    choose_security = st.button("Choose", key="security")
     st.text('Click "Choose" to be redirected to Cyber Security page.')
     st.image("images/security.jpg", use_container_width=True)
-    if security:
-        st.switch_page("pages/3_Cyber_Security.py")
+    if choose_security:
+        st.switch_page("pages/2_Cyber_Security.py")
 
 #Datasets column
 with col2:
     st.subheader("📁Datasets📁")
     #button for selection
-    datasets = st.button("Choose", key="datasets")
+    choose_datasets = st.button("Choose", key="datasets")
     st.text('Click "Choose" to be redirected to Datasets page.')
     st.image("images/datasets.jpg", use_container_width=True)
-    if datasets:
-        st.switch_page("pages/6_Datasets_Metadata.py")
+    if choose_datasets:
+        st.switch_page("pages/3_Datasets_Metadata.py")
 
 #IT Tickets column
 with col3:
     st.subheader("🎟️Tickets🎟️")
     #button for selection
-    tickets = st.button("Choose", key="tickets")
+    choose_tickets = st.button("Choose", key="tickets")
     st.text('Click "Choose" to be redirected to Tickets page.')
     st.image("images/tickets.jpg", use_container_width=True)
-    if tickets:
-        st.switch_page("pages/9_IT_Tickets.py")
+    if choose_tickets:
+        st.switch_page("pages/4_IT_Tickets.py")
 

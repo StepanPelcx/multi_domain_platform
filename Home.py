@@ -2,6 +2,7 @@ import streamlit as st
 from services.database_manager import DatabaseManager
 from services.auth_manager import AuthManager
 
+
 st.set_page_config(page_title="Login / Register", page_icon="🔑", layout="centered")
 
 # ---------- Initialise session state ----------
@@ -71,7 +72,7 @@ with tab_register:
     new_username = st.text_input("Choose a username", key="register_username").strip().capitalize()
     new_password = st.text_input("Choose a password", type="password", key="register_password")
     confirm_password = st.text_input("Confirm password", type="password", key="register_confirm")  
-    new_role = st.selectbox("Choose a role", ["User", "Admin", "Analyst", "Cyber Security Specialist", "Data Science Specialist", "IT Specialist"])
+    new_role = st.selectbox("Choose a role", ["User", "Admin", "Analyst", "Cyber Security Specialist", "Data Science Specialist", "It Specialist"])
 
     if st.button("💪🛡️Check Password Strength🛡️💪"):
         if new_password:

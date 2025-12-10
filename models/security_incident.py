@@ -84,6 +84,26 @@ class SecurityIncident:
         )
         return result.rowcount
     
+    # GET ALL INCIDENTS
+    def get_all_incidents(self) -> pd.DataFrame:
+        """Fetch all cybersecurity incidents from the database."""
+        query = "SELECT * FROM cyber_incidents ORDER BY id DESC"
+        rows = self.__db.fetch_all(query)
+        
+        # Return as DataFrame
+        return pd.DataFrame(
+            rows,
+            columns=[
+                "id",
+                "date",
+                "incident_type",
+                "severity",
+                "status",
+                "description",
+                "reported_by"
+            ]
+        )
+    
     #GET INCIDENT BY TYPE COUNT
     def get_incidents_by_type_count(self) -> pd.DataFrame:
         query = """

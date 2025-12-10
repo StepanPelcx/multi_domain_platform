@@ -11,6 +11,8 @@ import secrets
 class Hasher:
     """Hasher functions for registering the user."""
 
+    def __init__(self, db: DatabaseManager):
+        self.__db = db
     #HASH PASSWORD
     def hash_password(plain_text_password: str) -> str:
         """Returns a hashed password, created from plain text password."""
@@ -27,9 +29,7 @@ class Hasher:
     #CHANGE PASSWORD
     def change_password(self, username: str, new_password: str) -> bool:
         """Changes the password of a user."""
-        if not Hasher.validate_password(new_password):
-            return False
-        new_hashed = Hasher.hash_password(new_password)
+        new_hashed = self.hash_password(new_password)
         rows_updated = self.__db.execute_query(
             "UPDATE users SET password_hash = ? WHERE username = ?",
             (new_hashed, username)
@@ -97,7 +97,7 @@ class AuthManager:
         user = self.get_user_by_username(username)
         if not user:
             return "username"
-        if not user.verify_password(password):
+        if not user.verify_password(username=username, plain_text_password=password):
             return False
         return True
         
