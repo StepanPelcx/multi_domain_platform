@@ -88,6 +88,35 @@ class Dataset:
             (dataset_id,)
         )
         return cur.rowcount
+    
+    #UPDATE DATASET
+    def update_dataset(self, dataset_id: int, column: str, new_value):
+        """Updates a variable of a dataset based on the user input."""
+
+        # Validate column name
+        valid_columns = ["dataset_name", "category", "source", "last_updated", "record_count", "file_size_mb"]
+        if column not in valid_columns:
+            raise ValueError(f"Column '{column}' is not valid. Choose from {valid_columns}")
+        
+        #if updating last_updated automatically, you could also override here
+        if column != "last_updated":
+            last_updated = date.today()
+            query = f"""
+                UPDATE datasets_metadata
+                SET {column} = ?, last_updated = ?
+                WHERE id = ?
+            """
+            params = (new_value, last_updated, dataset_id)
+        else:
+            query = f"""
+                UPDATE datasets_metadata
+                SET {column} = ?
+                WHERE id = ?
+            """
+            params = (new_value, dataset_id)
+
+        cur = self.__db.execute_query(query, params)
+        return cur.rowcount
 
     #GET DATASETS BY CATEGORY COUNT
     def get_datasets_by_category_count(self):
