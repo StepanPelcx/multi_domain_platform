@@ -86,6 +86,13 @@ class ITTicket:
             ],
         )
     
+    #UPDATE TICKET
+    def update_ticket(self, ticket_id: int, column: str, new_value) -> int:
+        """Update a specific column of a ticket."""
+        query = f"UPDATE it_tickets SET {column} = ? WHERE id = ?"
+        result = self.__db.execute_query(query, (new_value, ticket_id))
+        return result.rowcount
+        
     #UPDATE STATUS
     def update_ticket_status(self, ticket_id: int, new_status: str) -> int:
         """Update the status of a ticket."""

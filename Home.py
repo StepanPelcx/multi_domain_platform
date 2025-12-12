@@ -23,7 +23,7 @@ if st.session_state.logged_in:
     st.success(f"Already logged in as **{st.session_state.username}**.")
     if st.button("Go to dashboard"):
         # Use the official navigation API to switch pages
-        st.switch_page("pages/1_Dashboard.py") # path is relative to Home.py :contentReference[oaicite:1]{index=1}
+        st.switch_page("pages/1_Home_Hub.py") # path is relative to Home.py :contentReference[oaicite:1]{index=1}
     # Sidebar logout button
     with st.sidebar:
         if st.button("Log out   ➜]"):
@@ -63,7 +63,7 @@ with tab_login:
             st.session_state.username = login_username
             st.success(f"Welcome back, {login_username}! 🎉 ")
             # Redirect to dashboard page
-            st.switch_page("pages/1_Dashboard.py")
+            st.switch_page("pages/1_Home_Hub.py")
 
 # ----- REGISTER TAB -----
 with tab_register:

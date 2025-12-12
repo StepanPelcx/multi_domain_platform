@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 from services.database_manager import DatabaseManager
 
-st.set_page_config(page_title="Dashboard", page_icon="📋", layout="wide")
+st.set_page_config(page_title="Hub", page_icon="📋", layout="wide")
 
 # Ensure state keys exist (in case user opens this page first)
 if "logged_in" not in st.session_state:
@@ -17,7 +17,7 @@ db.create_all_tables()
 
 # Guard: if not logged in, send user back
 if not st.session_state.logged_in:
-    st.error("You must be logged in to view the dashboard.")
+    st.error("You must be logged in to view the Hub page.")
     if st.button("Go to login page"):
         st.switch_page("Home.py") # back to the first page
     st.stop()
@@ -37,7 +37,7 @@ with st.sidebar:
         st.stop()
 
 # If logged in, show dashboard content
-st.title("☰Dashboard☰ ")
+st.title("☰Main Hub☰ ")
 
 now = datetime.datetime.now()
 
@@ -69,7 +69,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("🛡️Cyber Security🛡️")
     #button for selection
-    choose_security = st.button("Choose", key="security")
+    choose_security = st.button("Choose", key="choose_security_button")
     st.text('Click "Choose" to be redirected to Cyber Security page.')
     st.image("images/security.jpg", use_container_width=True)
     if choose_security:
@@ -79,7 +79,7 @@ with col1:
 with col2:
     st.subheader("📁Datasets📁")
     #button for selection
-    choose_datasets = st.button("Choose", key="datasets")
+    choose_datasets = st.button("Choose", key="choose_datasets_button")
     st.text('Click "Choose" to be redirected to Datasets page.')
     st.image("images/datasets.jpg", use_container_width=True)
     if choose_datasets:
@@ -89,7 +89,7 @@ with col2:
 with col3:
     st.subheader("🎟️Tickets🎟️")
     #button for selection
-    choose_tickets = st.button("Choose", key="tickets")
+    choose_tickets = st.button("Choose", key="choose_tickets_button")
     st.text('Click "Choose" to be redirected to Tickets page.')
     st.image("images/tickets.jpg", use_container_width=True)
     if choose_tickets:

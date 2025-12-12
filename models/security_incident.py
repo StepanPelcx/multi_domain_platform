@@ -67,6 +67,13 @@ class SecurityIncident:
         )
         return result.lastrowid
     
+    #UPDATE INCIDENT BY USER INPUT
+    def update_incident(self, incident_id: int, column: str, new_value) -> int:
+        """Update any incident based on user input."""
+        query = f"UPDATE cyber_incidents SET {column} = ? WHERE id = ?"
+        result = self.__db.execute_query(query, (new_value, incident_id))
+        return result.rowcount
+    
     #UPDATE INCIDENT
     def update_incident_status(self, incident_id: int, new_status: str) -> int:
         """Update the status of an incident."""

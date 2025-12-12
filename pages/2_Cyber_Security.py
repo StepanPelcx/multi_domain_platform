@@ -31,7 +31,7 @@ else:
 
 # Guard: if not logged in, send user back
 if not st.session_state.logged_in:
-    st.error("You must be logged in to view the dashboard.")
+    st.error("You must be logged in to view the Cyber Incidents.")
     if st.button("Go to login page"):
         st.switch_page("Home.py") # back to the first page
     st.stop()
@@ -95,8 +95,135 @@ with tab_dashboard:
     ax.set_title(f"Top {top_n} {group_column} distribution")
     st.pyplot(graph2)
 
+#============================================================================================================================================
+# CRUD Functions
+#============================================================================================================================================
+    
 with tab_CRUD:
-    pass
+    #creating columns for CRUD functions
+    col1, col2 = st.columns(2)
+
+    with col1:
+        #INSERT INCIDENT
+        with st.expander("➕ Insert Incident"):
+            with st.form("Insert Incident Form"):
+                #asking user for the data
+                date = st.date_input("Incident Date")
+                incident_type = st.text_input("Incident Type")
+                severity = st.selectbox("Severity", ["Low", "Medium", "High", "Critical"])
+                status = st.selectbox("Status", ["Open", "Investigating", "Resolved", "Closed"])
+                description = st.text_area("Description")
+                reported_by = st.text_input("Reported By (optional)")
+                created_at = st.date_input("Created At")
+
+                insert_incident_button = st.form_submit_button("Submit Incident")
+
+            if insert_incident_button:
+                if not incident_type or not severity or not status or not description:
+                    st.error("❌ Please fill in all required fields.❌")
+                else:
+                    new_id = cyber_model.insert_incident(
+                        date=str(date),
+                        incident_type=incident_type,
+                        severity=severity,
+                        status=status,
+                        description=description,
+                        reported_by=reported_by if reported_by else None,
+                        created_at=str(created_at),
+                    )
+                    st.success(f"✅ Incident successfully added with ID: {new_id}✅")
+
+        #DELETE INCIDENT
+        with st.expander("🗑️ Delete Incident"):
+            with st.form("Delete Incident Form"):
+                #asking user the id
+                delete_id = st.number_input("Incident ID to delete", min_value=1, step=1)
+                delete_button = st.form_submit_button("Delete Incident")
+
+            if delete_button:
+                rows = cyber_model.delete_incident(int(delete_id))
+                if rows > 0:
+                    st.success(f"✅ Incident {delete_id} deleted successfully!✅")
+                else:
+                    st.error("❌ Incident not found.❌")
+        
+        #UPDATE INCIDENT
+        with st.expander("🔄 Update Incident"):
+            with st.form("Update Incident Form"):
+                incident_id = st.number_input("Incident ID to update", min_value=1, step=1)
+                #Asking user for the column to update
+                column = st.selectbox(
+                    "Choose field to update",
+                    ["incident_type", "severity", "status", "description", "reported_by", "date", "created_at"]
+                )
+
+                #checking input
+                if column in ["incident_type", "severity", "status", "reported_by", "description"]:
+                    new_value = st.text_input("New Value")
+                elif column in ["date", "created_at"]:
+                    new_value = st.date_input("New Date")
+                else:
+                    new_value = st.text_input("New Value")
+
+                update_button = st.form_submit_button("Update Incident")
+            
+            if update_button:
+                if column in ["date", "created_at"]:
+                    new_value = str(new_value)
+
+                rows = cyber_model.update_incident(int(incident_id), column, new_value)
+
+                if rows > 0:
+                    st.success(f"✅ Incident {incident_id} updated successfully!✅")
+                else:
+                    st.error("❌ Incident ID not found.❌")
+
+    with col2:
+        #INCIDENTS COUNT BY TYPE
+        with st.expander("📊 Incident Count by Type"):
+            if st.button("Show Incident Type Counts"):
+                #calling the function
+                df = cyber_model.get_incidents_by_type_count()
+
+                if df.empty:
+                    st.warning("❌No incident data available.❌")
+                else:
+                    st.dataframe(df)
+                    st.bar_chart(df.set_index("incident_type"))
+
+        #HIGH SEVERITY INCIDENTS BY STATUS
+        with st.expander("📊 High Severity Incidents by Status"):
+            if st.button("Show High Severity Stats"):
+                df = cyber_model.get_high_severity_by_status()
+
+                if df.empty:
+                    st.warning("❌No high-severity incidents found.❌")
+                else:
+                    st.dataframe(df)
+                    st.bar_chart(df.set_index("status"))
+
+        #INCIDENTS TYPES WITH MANY CASES
+        with st.expander("📊 Incident Types With Many Cases"):
+            min_count = st.number_input("Minimum number of cases", min_value=1, value=5, step=1)
+
+            if st.button("Show Types Exceeding Threshold"):
+                df = cyber_model.get_incident_types_with_many_cases(min_count=min_count)
+
+                if df.empty:
+                    st.warning(f"❌No incident types with more than {min_count} cases.❌")
+                else:
+                    st.dataframe(df)
+                    st.bar_chart(df.set_index("incident_type"))
+
+        #getting all incidents
+        with st.expander("📊View all incidents"):
+            df_all = cyber_model.get_all_incidents()
+
+            if df_all.empty:
+                st.warning("❌No incident found in the database.❌")
+            else:
+                #dataframe
+                st.dataframe(df_all)
 
 # ====================
 # AI assistance
@@ -235,5 +362,5 @@ with st.sidebar:
 
 # Sidebar back to dashboard button
 with st.sidebar:
-    if st.button("Back to Dashboard"):
-        st.switch_page("pages/1_Dashboard.py")
+    if st.button("Back to Hub"):
+        st.switch_page("pages/1_Home_Hub.py")

@@ -29,7 +29,7 @@ else:
 
 # Guard: if not logged in, send user back
 if not st.session_state.logged_in:
-    st.error("You must be logged in to view the dashboard.")
+    st.error("You must be logged in to view the IT Tickets.")
     if st.button("Go to login page"):
         st.switch_page("Home.py") # back to the first page
     st.stop()
@@ -93,8 +93,149 @@ with tab_dashboard:
     ax.set_title(f"Top {top_n} {group_column} distribution")
     st.pyplot(graph2)
 
+#============================================================================================================================================
+# CRUD Functions
+#============================================================================================================================================
+    
 with tab_CRUD:
-    pass
+    #creating columns for CRUD functions
+    col1, col2 = st.columns(2)
+
+    with col1:
+        #INSERT TICKET
+        with st.expander("➕ Insert Ticket"):
+            with st.form("insert ticket form"):
+                #user inputs
+                ticket_id = st.text_input("Ticket ID")
+                priority = st.selectbox("Priority", ["Low", "Medium", "High", "Critical"])
+                status = st.selectbox("Status", ["Open", "In Progress", "Resolved", "Closed"])
+                category = st.text_input("Category")
+                subject = st.text_input("Subject")
+                description = st.text_area("Description")
+                created_date = st.date_input("Created Date")
+                resolved_date_input = st.date_input("Resolved Date (optional)", value=None)
+                assigned_to = st.text_input("Assigned To")
+                created_at = st.date_input("Created At")
+
+                insert_ticket_button = st.form_submit_button("Submit Ticket")
+
+            #Insert ticket into database
+            if insert_ticket_button:
+                if (not ticket_id or not priority or not status or not category or 
+                    not subject or not description or not created_date or not created_at):
+                    st.error("❌ Please fill in all required fields. ❌")
+
+                else:
+                    ticket_db_id = ticket_model.insert_ticket(
+                        ticket_id=ticket_id,
+                        priority=priority,
+                        status=status,
+                        category=category,
+                        subject=subject,
+                        description=description,
+                        created_date=str(created_date),
+                        resolved_date=str(resolved_date_input) if resolved_date_input else None,
+                        assigned_to=assigned_to,
+                        created_at=str(created_at)
+                    )
+
+                    st.success(f"✅ Ticket successfully inserted with ID: {ticket_db_id} ✅")
+
+        # DELETE TICKET
+        with st.expander("🗑️ Delete Ticket"):
+            with st.form("delete ticket form"):
+                ticket_id_to_delete = st.number_input("Ticket ID to Delete", min_value=1, step=1)
+
+                delete_ticket_button = st.form_submit_button("Delete Ticket")
+
+            if delete_ticket_button:
+                if not ticket_id_to_delete:
+                    st.error("❌ Please enter a valid Ticket ID. ❌")
+                else:
+                    rows_deleted = ticket_model.delete_ticket(int(ticket_id_to_delete))
+
+                    if rows_deleted > 0:
+                        st.success(f"✅ Ticket with ID {ticket_id_to_delete} was successfully deleted! ✅")
+                    else:
+                        st.error(f"❌ No ticket found in the database with ID {ticket_id_to_delete}. ❌")
+
+        #UPDATE TICKET
+        with st.expander("🔄 Update Ticket"):
+            with st.form("update ticket form"):
+                ticket_id = st.number_input("Ticket ID to update", min_value=1, step=1)
+                #user selects what column to update
+                column_to_update = st.selectbox(
+                    "Select column to update",
+                    [
+                        "ticket_id",
+                        "priority",
+                        "status",
+                        "category",
+                        "subject",
+                        "description",
+                        "created_date",
+                        "resolved_date",
+                        "assigned_to",
+                        "created_at"
+                    ]
+                )
+
+                #Input types based on selected column
+                if column_to_update in ["ticket_id", "priority", "status", "category", "subject", "assigned_to"]:
+                    new_value = st.text_input("New value")
+
+                elif column_to_update in ["description"]:
+                    new_value = st.text_area("New description")
+
+                elif column_to_update in ["created_date", "resolved_date", "created_at"]:
+                    new_value = st.date_input("New date")
+
+                #Submit update
+                if st.form_submit_button("Update Ticket"):
+                    #Convert date to string
+                    if column_to_update in ["created_date", "resolved_date", "created_at"]:
+                        new_value = str(new_value)
+
+                    rows_updated = ticket_model.update_ticket(ticket_id, column_to_update, new_value)
+
+                    if rows_updated > 0:
+                        st.success(f"✅ Ticket ID {ticket_id} updated successfully!✅")
+                    else:
+                        st.error(f"❌ Ticket ID {ticket_id} not found.❌")
+
+
+    with col2:
+        #TICKET COUNT BY CATEGORY
+        with st.expander("📊 Ticket Count by Category"):
+            df_category_count = ticket_model.get_tickets_by_category_count()
+            if df_category_count.empty:
+                st.warning("❌No tickets found in the database.❌")
+            else:
+                st.dataframe(df_category_count, use_container_width=True)
+
+        #TICKETS BY STATUS
+        with st.expander("📊 Filter Tickets by Status"):
+            selected_status = st.selectbox(
+                "Select ticket status",
+                ["Open", "In Progress", "Resolved", "Closed"]
+            )
+
+            df_status = ticket_model.get_tickets_by_status(selected_status)
+
+            if df_status.empty:
+                st.info(f"No tickets found with status: {selected_status}")
+            else:
+                st.dataframe(df_status, use_container_width=True)
+
+        #Getting all tickets
+        with st.expander("📊View all tickets"):
+            df_all = ticket_model.get_all_tickets()
+
+            if df_all.empty:
+                st.warning("❌No tickets found in the database.❌")
+            else:
+                #dataframe
+                st.dataframe(df_all)
 
 # ====================
 # AI assistance
@@ -236,5 +377,5 @@ with st.sidebar:
 
 # Sidebar back to dashboard button
 with st.sidebar:
-    if st.button("Back to Dashboard"):
-        st.switch_page("pages/1_Dashboard.py")
+    if st.button("Back to Hub"):
+        st.switch_page("pages/1_Home_Hub.py")

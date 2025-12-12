@@ -32,7 +32,7 @@ if "messages_DS" not in st.session_state:
 
 # Guard: if not logged in, send user back
 if not st.session_state.logged_in:
-    st.error("You must be logged in to view the dashboard.")
+    st.error("You must be logged in to view the Datasets Metadata.")
     if st.button("Go to login page"):
         st.switch_page("Home.py") # back to the first page
     st.stop()
@@ -98,16 +98,17 @@ with tab_dashboard:
 
     st.pyplot(graph2)
 
+#============================================================================================================================================
+# CRUD Functions
+#============================================================================================================================================ 
+
 with tab_CRUD:
-    #============================================================================================================================================
-    # CRUD Functions
-    #============================================================================================================================================
-    
+    #creating columns for CRUD functions
     col1, col2 = st.columns(2)
 
     with col1:
         #Insert a dataset
-        with st.expander("Insert Dataset"):
+        with st.expander("➕ Insert Dataset"):
             with st.form("dataset form"):
                 #getting input from user
                 dataset_name = st.text_input("Dataset Name")
@@ -240,7 +241,7 @@ with tab_CRUD:
                     st.dataframe(df_repeating)
 
         #Getting all datasets
-        with st.expander("📊view_all_datasets"):
+        with st.expander("📊View all datasets"):
             df_all = dataset_model.get_all_datasets()
 
             if df_all.empty:
@@ -390,5 +391,5 @@ with st.sidebar:
 
 # Sidebar back to dashboard button
 with st.sidebar:
-    if st.button("Back to Dashboard"):
-        st.switch_page("pages/1_Dashboard.py")
+    if st.button("Back to Hub"):
+        st.switch_page("pages/1_Home_Hub.py")

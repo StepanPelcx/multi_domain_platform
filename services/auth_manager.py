@@ -14,7 +14,7 @@ class Hasher:
     def __init__(self, db: DatabaseManager):
         self.__db = db
     #HASH PASSWORD
-    def hash_password(plain_text_password: str) -> str:
+    def hash_password(self, plain_text_password: str) -> str:
         """Returns a hashed password, created from plain text password."""
         #Encoding plain password into bytes
         password_bytes = plain_text_password.encode('utf-8')
