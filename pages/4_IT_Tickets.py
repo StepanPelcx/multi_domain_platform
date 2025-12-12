@@ -20,7 +20,7 @@ ticket_model = ITTicket(ticket_id=0, title="Cannot connect to VPN", priority="Hi
 ticket_model.migrate_tickets()
 
 #Loading tickets into df
-if "tickets_loaded" not in st.session_state:
+if ("tickets_loaded") or ("tickets") not in st.session_state:
     st.session_state.tickets_loaded = True
     df = ticket_model.get_all_tickets()
     st.session_state.tickets = df
@@ -35,6 +35,191 @@ if not st.session_state.logged_in:
     st.stop()
 
 st.header("🎟️Tickets Dashboard🎟️")
+
+#creating tabs to show different functions
+tab_dashboard, tab_CRUD, tab_ai = st.tabs(["Dashboard", "CRUD Functions", "AI Assistant"])
+
+with tab_dashboard:
+    #getting the df
+    df = df
+    #displaying the df
+    with st.expander("DataFrame"):
+        st.dataframe(df)
+
+    #FIRST GRAPH
+    st.subheader("Numeric aggregation by category")
+
+    graph_type = st.selectbox(
+        "Choose graph type",
+        ["Bar Chart", "Line Chart", "Area Chart"], key="ticket_graph1"
+    )
+
+    #categorical columns - x axis
+    categorical_cols = ["priority", "status", "category", "assigned_to"]
+    x_axis = st.selectbox("Select X-axis (categorical)", categorical_cols)
+
+    #numeric columns - y axis
+    numeric_cols = df.select_dtypes(include=["int64","float64"]).columns.tolist()
+    y_axis = st.selectbox("Select Y-axis (numeric)", numeric_cols)
+
+    #aggregate numeric values per category
+    plot_data = df[[x_axis, y_axis]].groupby(x_axis).sum()
+
+    #displaying chart
+    st.subheader(f"{graph_type} of {y_axis} by {x_axis}")
+    if graph_type == "Bar Chart":
+        st.bar_chart(plot_data)
+    elif graph_type == "Line Chart":
+        st.line_chart(plot_data)
+    elif graph_type == "Area Chart":
+        st.area_chart(plot_data)
+    
+    #SECOND GRAPH
+    st.subheader("Categorical distribution (Pie chart)")
+    #user selects category
+    group_column = st.selectbox("Select categorical column for Pie chart", categorical_cols, key="ticket_graph2")
+    #slider for choosing N categories
+    top_n = st.slider(
+        f"Select number of top {group_column} categories to display",
+        1, df[group_column].nunique(), 5
+    )
+
+    #counting categories
+    counts = df[group_column].value_counts().head(top_n)
+
+    #creating pie chart
+    graph2, ax = plt.subplots()
+    ax.pie(counts.values, labels=counts.index, autopct="%1.1f%%", startangle=140)
+    ax.set_title(f"Top {top_n} {group_column} distribution")
+    st.pyplot(graph2)
+
+with tab_CRUD:
+    pass
+
+# ====================
+# AI assistance
+# ====================
+
+with tab_ai:
+    #checking if the key exists
+    if "OPENAI_API_KEY" not in st.secrets:
+        st.error("❌ OpenAI API key is missing from Streamlit secrets.")
+        st.stop()
+    #calling AI instance
+    AI = ITTicketsAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+    with st.sidebar:
+        st.subheader("🤖 AI Controls")
+        choice = st.selectbox(
+            "Choose Assistant",
+            ["Analyst", "Assistant"]
+        )
+
+    #getting all datasets
+    df = ticket_model.get_all_tickets()
+
+    #Choice Analyst
+    if choice == "Analyst":
+        st.header("🤖 AI Ticket Analyst")
+        st.text("This AI assistant gives you analysis of a ticket of your choice.")
+
+        #TICKETS ANALYTICS
+        if df.empty:
+            st.warning("❌ No tickets found in the database. ❌")
+        else:
+            #letting the user select a ticket
+            ticket_options = [
+                f"{d['ticket_id']} ({d['category']}) - {d['status']}" 
+                for _, d in df.iterrows()
+            ]
+            selected_idx = st.selectbox(
+                "Select ticket to analyze:",
+                range(len(ticket_options)),
+                format_func=lambda i: ticket_options[i]
+            )
+            ticket = df.iloc[selected_idx].to_dict()
+
+            #display dataset info
+            st.subheader("📋 Ticket Details")
+            st.write(f"**Ticket ID:** {ticket['ticket_id']}")
+            st.write(f"**Priority:** {ticket['priority']}")
+            st.write(f"**Status:** {ticket['status']}")
+            st.write(f"**Category:** {ticket['category']}")
+            st.write(f"**Subject:** {ticket['subject']}")
+            st.write(f"**Description:** {ticket['description']}")
+            st.write(f"**Created Date:** {ticket['created_date']}")
+            st.write(f"**Resolved Date:** {ticket['resolved_date']}")
+            st.write(f"**Assigned To:** {ticket['assigned_to']}")
+            st.write(f"**Created At:** {ticket['created_at']}")
+
+            # Button to analyze with AI
+            if st.button("🤖 Analyze with AI"):
+                with st.spinner("AI analyzing ticket..."):
+                    ai_response = AI.analyze_ticket(ticket)
+                    st.subheader("🧠 AI Analysis")
+                    st.write(ai_response)
+
+    #Choice Assistant
+    else:
+        st.header("💬 AI IT Assistant")
+
+        if "AIIT" not in st.session_state:
+            st.session_state.AIIT = ITTicketsAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+        AI = st.session_state.AIIT
+
+        if "messages_IT" not in st.session_state:
+            st.session_state.messages_IT = []  # stores conversation history
+
+        # Display previous messages
+        for message in st.session_state.messages_IT:
+            if message["role"] != "system":
+                with st.chat_message(message["role"]):
+                    st.write(message["content"])
+
+        # a container
+        chat_container = st.container() 
+
+        # User input
+        user_input = st.chat_input("Ask me anything...")
+
+        if user_input:
+            # Add the new user message immediately to the container
+            with chat_container:
+                with st.chat_message("user"):
+                    st.markdown(user_input)
+
+                with st.chat_message("assistant") as assistant_chat:
+                    assistant_placeholder = st.empty()
+
+            # Append user message to session after rendering
+            st.session_state.messages_IT.append({"role": "user", "content": user_input})
+
+            # Prepare AI history
+            AI._AIAssistant__history = [{"role": "system", "content": AI._AIAssistant__system_prompt}] + st.session_state.messages_IT
+
+            # Stream AI response
+            full_response = ""
+            for chunk in AI.stream_message(user_input):
+                full_response += chunk
+                assistant_placeholder.markdown(full_response + "▌")  # streaming cursor
+
+            # Save final assistant response
+            st.session_state.messages_IT.append({"role": "assistant", "content": full_response})
+            assistant_placeholder.markdown(full_response)  # remove cursor
+
+
+        with st.sidebar:
+            st.subheader("💬 Chat controls")
+            # Show message count
+            message_count = sum(1 for message in st.session_state.get("messages_IT", []) if message["role"] in ["user", "assistant"])
+            st.metric("Messages", message_count)
+            # Clear chat history
+            if st.button("🗑️ Clear Chat History"):
+                AI.clear_history()
+                st.session_state.messages_IT = []
+                st.rerun()
+
 
 # Sidebar logout button
 with st.sidebar:

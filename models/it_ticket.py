@@ -151,6 +151,13 @@ class ITTicket:
             return False
 
         for _, row in df.iterrows():
+            # check if ticket_id already exists
+            existing = self.__db.fetch_all(
+                "SELECT 1 FROM it_tickets WHERE ticket_id = ?", (row["ticket_id"],)
+            )
+            if existing:
+                continue  # skip duplicates
+
             self.insert_ticket(
                 ticket_id=row["ticket_id"],
                 priority=row["priority"],
@@ -159,9 +166,7 @@ class ITTicket:
                 subject=row["subject"],
                 description=row["description"],
                 created_date=str(row["created_date"]),
-                resolved_date=str(row["resolved_date"])
-                if not pd.isna(row["resolved_date"])
-                else None,
+                resolved_date=str(row["resolved_date"]) if not pd.isna(row["resolved_date"]) else None,
                 assigned_to=row["assigned_to"],
                 created_at=str(row["created_at"]),
             )

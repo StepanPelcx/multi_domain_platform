@@ -43,13 +43,13 @@ st.header("📁Datasets Metadata📁")
 tab_dashboard, tab_CRUD, tab_ai = st.tabs(["Dashboard", "CRUD Functions", "AI Assistant"])
 
 with tab_dashboard:
-    st.header("📁📊📈Datasets Analytics📈📊📁")
-        
     #getting the data
     df = dataset_model.get_all_datasets()
 
     st.subheader("Dataset Table")
-    st.dataframe(df)
+    #displaying df
+    with st.expander("DataFrame"):
+        st.dataframe(df)
 
     # Let user choose what type of graph
     graph_type = st.selectbox(
@@ -93,7 +93,7 @@ with tab_dashboard:
 
     # Create pie chart
     graph2, ax = plt.subplots()
-    ax.pie(counts.values, labels=counts.index, autopct="%1.1f%%", startangle=140)
+    ax.pie(counts.values)
     ax.set_title(f"Top {top_n} {group_column} distribution")
 
     st.pyplot(graph2)
@@ -313,10 +313,10 @@ with tab_ai:
     else:
         st.header("💬 AI Data Science Assistant")
 
-        if "AI" not in st.session_state:
-            st.session_state.AI = DatasetsMetadataAI(api_key=st.secrets["OPENAI_API_KEY"])
+        if "AIDS" not in st.session_state:
+            st.session_state.AIDS = DatasetsMetadataAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-        AI = st.session_state.AI
+        AI = st.session_state.AIDS
 
         if "messages_DS" not in st.session_state:
             st.session_state.messages_DS = []  # stores conversation history

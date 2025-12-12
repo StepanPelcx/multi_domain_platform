@@ -6,13 +6,14 @@ class SecurityIncident:
     """Represents a cybersecurity incident in the platform."""
 
     #creating variables of the class
-    def __init__(self, incident_id: int, incident_type: str, severity: str, status: str, description: str, reported_by: str, db: DatabaseManager):
+    def __init__(self, incident_id: int, incident_type: str, severity: str, status: str, description: str, reported_by: str, created_at: str, db: DatabaseManager):
         self.__id = incident_id
         self.__incident_type = incident_type
         self.__severity = severity
         self.__status = status
         self.__description = description
         self.__reported_by = reported_by
+        self.__created_at = created_at
         self.__db = db
 
     def get_id(self) -> str:
@@ -54,15 +55,15 @@ class SecurityIncident:
 # =======================
 
     #INSERT INCIDENT
-    def insert_incident(self, date: str, incident_type: str, severity: str, status: str, description: str, reported_by: str | None = None,) -> int:
+    def insert_incident(self, date: str, incident_type: str, severity: str, status: str, description: str, reported_by: str | None = None, created_at: str | None = None) -> int:
         """Insert a new cyber incident into the database."""
         result = self.__db.execute_query(
             """
             INSERT INTO cyber_incidents
-            (date, incident_type, severity, status, description, reported_by)
-            VALUES (?, ?, ?, ?, ?, ?)
+            (date, incident_type, severity, status, description, reported_by, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
-            (date, incident_type, severity, status, description, reported_by),
+            (date, incident_type, severity, status, description, reported_by, created_at),
         )
         return result.lastrowid
     
@@ -100,7 +101,8 @@ class SecurityIncident:
                 "severity",
                 "status",
                 "description",
-                "reported_by"
+                "reported_by",
+                "created_at"
             ]
         )
     
@@ -159,6 +161,7 @@ class SecurityIncident:
                 status=row["status"],
                 description=row["description"],
                 reported_by=row.get("reported_by"),
+                created_at=row["created_at"]
             )
         return True
     
