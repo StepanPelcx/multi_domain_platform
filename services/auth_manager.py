@@ -8,7 +8,7 @@ import secrets
 
 
 
-class Hasher:
+class Hasher:   
     """Hasher functions for registering the user."""
 
     def __init__(self, db: DatabaseManager):
