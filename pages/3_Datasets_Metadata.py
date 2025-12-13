@@ -15,12 +15,10 @@ dataset_model = Dataset(dataset_id=0, name="", size_bytes=0, rows=0, source="", 
 dataset_model.migrate_datasets()
 
 #Loading datasets into df
-if ("dashboard_loaded") or ("datasets") not in st.session_state:
-    st.session_state.dashboard_loaded = True
-    df = dataset_model.get_all_datasets()
-    st.session_state.datasets = df  
-else:
-    df = st.session_state.datasets
+if "datasets" not in st.session_state:
+    st.session_state.datasets = dataset_model.get_all_datasets()
+    
+df = st.session_state.datasets
 
 # Ensure state keys exist (in case user opens this page first)
 if "logged_in" not in st.session_state:
@@ -44,7 +42,7 @@ tab_dashboard, tab_CRUD, tab_ai = st.tabs(["Dashboard", "CRUD Functions", "AI As
 
 with tab_dashboard:
     #getting the data
-    df = dataset_model.get_all_datasets()
+    df = st.session_state.datasets
 
     st.subheader("Dataset Table")
     #displaying df
@@ -93,7 +91,7 @@ with tab_dashboard:
 
     # Create pie chart
     graph2, ax = plt.subplots()
-    ax.pie(counts.values)
+    ax.pie(counts.values, labels=counts.index, autopct="%1.1f%%")
     ax.set_title(f"Top {top_n} {group_column} distribution")
 
     st.pyplot(graph2)
@@ -242,13 +240,13 @@ with tab_CRUD:
 
         #Getting all datasets
         with st.expander("📊View all datasets"):
-            df_all = dataset_model.get_all_datasets()
+            df = st.session_state.datasets
 
-            if df_all.empty:
+            if df.empty:
                 st.warning("❌No datasets found in the database.❌")
             else:
                 #dataframe
-                st.dataframe(df_all)
+                st.dataframe(df)
 
 # ====================
 # AI assistance
@@ -270,7 +268,7 @@ with tab_ai:
         )
 
     #getting all datasets
-    df = dataset_model.get_all_datasets()
+    df = st.session_state.datasets
 
     #Choice Analyst
     if choice == "Analyst":

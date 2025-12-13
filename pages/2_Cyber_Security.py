@@ -22,7 +22,7 @@ cyber_model = SecurityIncident(incident_id=0, incident_type="Phishing", severity
 cyber_model.migrate_incidents()
 
 #Loading incidents into df
-if ("incidents_loaded") or ("incidents") not in st.session_state:
+if "incidents_loaded" not in st.session_state or "incidents" not in st.session_state:
     st.session_state.incidents_loaded = True
     df = cyber_model.get_all_incidents()
     st.session_state.incidents = df
@@ -91,7 +91,7 @@ with tab_dashboard:
 
     #creating pie chart
     graph2, ax = plt.subplots()
-    ax.pie(counts.values, labels=counts.index,)
+    ax.pie(counts.values, labels=counts.index, autopct="%1.1f%%")
     ax.set_title(f"Top {top_n} {group_column} distribution")
     st.pyplot(graph2)
 
@@ -245,7 +245,7 @@ with tab_ai:
         )
 
     #getting all datasets
-    df = cyber_model.get_all_incidents()
+    df = st.session_state.incidents
 
     #Choice Analyst
     if choice == "Analyst":
@@ -258,24 +258,34 @@ with tab_ai:
         else:
             #letting the user select an incident
             incident_options = [
-                f"{d["incident_type"]} ({d["severity"]}) - {d["status"]}" 
+                f"{d['incident_type']} ({d['severity']}) - {d['status']}" 
                 for _, d in df.iterrows()
             ]
+
+            #making sure the selected incident stays selected
+            if "selected_incident_idx" not in st.session_state:
+                st.session_state.selected_incident_idx = 0
+
             selected_idx = st.selectbox(
                 "Select incident to analyze:",
                 range(len(incident_options)),
-                format_func=lambda i: incident_options[i]
+                format_func=lambda i: incident_options[i],
+                index=st.session_state.selected_incident_idx,
+                key="incident_selectbox"
             )
+            #storing selected incident
+            st.session_state.selected_incident_idx = selected_idx
+
             incident = df.iloc[selected_idx].to_dict()
 
             #display dataset info
             st.subheader("📋 Incident Details")
-            st.write(f"**Incident Type:** {incident["incident_type"]}")
-            st.write(f"**Date:** {incident["date"]}")
-            st.write(f"**Severity:** {incident["severity"]}")
-            st.write(f"**Status:** {incident["status"]}")
-            st.write(f"**Description:** {incident["description"]}")
-            st.write(f"**Reported by:** {incident["reported_by"]}")
+            st.write(f"**Incident Type:** {incident['incident_type']}")
+            st.write(f"**Date:** {incident['date']}")
+            st.write(f"**Severity:** {incident['severity']}")
+            st.write(f"**Status:** {incident['status']}")
+            st.write(f"**Description:** {incident['description']}")
+            st.write(f"**Reported by:** {incident['reported_by']}")
 
             # Button to analyze with AI
             if st.button("🤖 Analyze with AI"):
